@@ -1,16 +1,20 @@
-# thestories
+# The Stories
 
-A new Flutter project.
+The Stories is a community where users share their life or fiction stories. Stories that will help people exchange life experiences, improve thinking, imagination, writing and reading skills. Publications in our application consists only text and images. Thus, users can focus only for reading and writing stories.
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project uses Serverless Architecture – FaaS 
 
-A few resources to get you started if this is your first Flutter project:
+Front-end
+Flutter
+Dart
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Back-end
+Firebase (Google Cloud Platfrom)
+MongoDB 
+Lambda (Amazon Web Services)
+Node JS (for cloud functions)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Refer to ppt file for more information
