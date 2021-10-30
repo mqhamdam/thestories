@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "158126784728",
+    "project_id": "thestories-6e6c6",
+    "storage_bucket": "thestories-6e6c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158126784728:android:64760544f25428c10417ad",
+        "android_client_info": {
+          "package_name": "com.mqhamdam.thestories"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158126784728-suude08b66344gojcsimj0em0its3c4c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mqhamdam.thestories",
+            "certificate_hash": "886c5f816e2ae2d0a7d92d5016225ab81696793a"
+          }
+        },
+        {
+          "client_id": "158126784728-bicq7vqk53034f22lv808gmqbn1lto78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDA7rcjvf_XZ3vEEo4pIasFDjaO1Rdv6gU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158126784728-bicq7vqk53034f22lv808gmqbn1lto78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
