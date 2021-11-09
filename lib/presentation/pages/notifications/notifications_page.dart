@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/presentation/pages/notifications/view/notification_comments_view.dart';
+import 'package:thestories/presentation/pages/notifications/view/notification_general_view.dart';
 import 'package:thestories/presentation/pages/notifications/view/notification_sb_requested_view.dart';
 import 'package:thestories/presentation/pages/notifications/view/notification_sber_requested_view.dart';
 import 'package:thestories/presentation/pages/notifications/view/notification_votes_view.dart';
@@ -11,7 +12,7 @@ class NotificationsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -22,15 +23,19 @@ class NotificationsScreen extends StatelessWidget {
             indicatorColor: Colors.green,
             tabs: [
               Tab(
-                  child: Row(
-                children: [
-                  SvgPicture.asset("assets/icons/fi-rr-thumbs-down.svg"),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg"),
-                ],
-              )),
+                child: SvgPicture.asset("assets/icons/fi-rr-bell-ring.svg"),
+              ),
+              Tab(
+                child: Row(
+                  children: [
+                    SvgPicture.asset("assets/icons/fi-rr-thumbs-down.svg"),
+                    SizedBox(
+                      width: 2,
+                    ),
+                    SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg"),
+                  ],
+                ),
+              ),
               Tab(
                 child: SvgPicture.asset("assets/icons/fi-rr-comment-alt.svg"),
               ),
@@ -44,6 +49,7 @@ class NotificationsScreen extends StatelessWidget {
           ),
         ),
         body: TabBarView(children: [
+          NotificationGeneralView(),
           VotesView(),
           NCommentsView(),
           // when requested to client

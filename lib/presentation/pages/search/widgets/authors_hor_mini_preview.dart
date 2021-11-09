@@ -35,20 +35,22 @@ class AuthorsHorizontalMiniPreview extends StatelessWidget {
             ),
           ),
           Container(
-            height: 250,
+            height: 230,
             child: ListView.builder(
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Container(
-                  padding: EdgeInsets.all(3),
+                  padding: EdgeInsets.all(1),
+
                   //width: 200,
                   child: Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20)),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 10),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/data/dummy_data.dart';
+import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 
 class StoryMiniPreview extends StatelessWidget {
   const StoryMiniPreview({Key? key}) : super(key: key);
@@ -60,6 +61,10 @@ class StoryMiniPreview extends StatelessWidget {
                         color: Colors.black87,
                         fontSize: 10)),
                 Spacer(),
+                CustomAvatar(imgUrl: avatar_url_template, radius: 10),
+                SizedBox(
+                  width: 10,
+                ),
                 Text("By @username",
                     style: TextStyle(
                         fontWeight: FontWeight.w300,

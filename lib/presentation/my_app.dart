@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:thestories/presentation/routes/app_router.gr.dart';
+import 'package:thestories/presentation/theme/theme_barrier.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(),
+      theme: ligthTheme(),
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
     );

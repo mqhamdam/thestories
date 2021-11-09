@@ -3,6 +3,7 @@ import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/pages/profile/widgets/story_single_preview.dart';
+import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -156,7 +157,9 @@ class ProfileScreen extends StatelessWidget {
                                 "Achievemnts",
                                 style: TextStyle(color: Colors.black),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                AchievementsScreenRoute().show(context);
+                              },
                             ),
                           ),
                         ),
