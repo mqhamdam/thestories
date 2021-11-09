@@ -26,122 +26,118 @@ class AuthenticationScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-              child: Card(
-                elevation: 10,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(33)),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 10.0, vertical: 10),
-                  child: Column(
-                    children: [
-                      TextFormField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(33),
-                          ),
-                          prefixIcon: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 20.0, right: 15),
-                            child: SvgPicture.asset(
-                              "assets/icons/fi-rr-at.svg",
-                            ),
-                          ),
-                          prefixIconConstraints: BoxConstraints.tightFor(),
-                          label: Text("Email"),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 30),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(33),
+                      ),
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 15),
+                        child: SvgPicture.asset(
+                          "assets/icons/fi-rr-at.svg",
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
+                      prefixIconConstraints: BoxConstraints.tightFor(),
+                      label: Text("Email"),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(33),
                       ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(33),
-                          ),
-                          prefixIcon: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 20.0, right: 15),
-                            child: SvgPicture.asset(
-                              "assets/icons/fi-rr-lock-alt.svg",
-                            ),
-                          ),
-                          prefixIconConstraints: BoxConstraints.tightFor(),
-                          suffixIcon: Padding(
-                            padding: const EdgeInsets.only(left: 15, right: 20),
-                            child: SvgPicture.asset(
-                              "assets/icons/fi-rr-eye.svg",
-                            ),
-                          ),
-                          suffixIconConstraints: BoxConstraints.tightFor(),
-                          label: Text("Password"),
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 15),
+                        child: SvgPicture.asset(
+                          "assets/icons/fi-rr-lock-alt.svg",
                         ),
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextFormField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(33),
-                          ),
-                          prefixIcon: Padding(
-                            padding:
-                                const EdgeInsets.only(left: 20.0, right: 15),
-                            child: SvgPicture.asset(
-                              "assets/icons/fi-rr-lock-alt.svg",
-                            ),
-                          ),
-                          prefixIconConstraints: BoxConstraints.tightFor(),
-                          suffixIcon: Padding(
-                            padding: const EdgeInsets.only(right: 15),
-                            child: SvgPicture.asset(
-                              "assets/icons/fi-rr-eye.svg",
-                            ),
-                          ),
-                          suffixIconConstraints: BoxConstraints.tightFor(),
-                          label: Text("Password verification"),
+                      prefixIconConstraints: BoxConstraints.tightFor(),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.only(left: 15, right: 20),
+                        child: SvgPicture.asset(
+                          "assets/icons/fi-rr-eye.svg",
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ListTile(
-                          subtitle: Text(
-                              "I have read and agreed with the terms and conditions."),
-                          trailing: Checkbox(
-                            value: false,
-                            onChanged: (value) {},
-                            shape: CircleBorder(),
-                          ),
+                      suffixIconConstraints: BoxConstraints.tightFor(),
+                      label: Text("Password"),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(33),
+                      ),
+                      prefixIcon: Padding(
+                        padding: const EdgeInsets.only(left: 20.0, right: 15),
+                        child: SvgPicture.asset(
+                          "assets/icons/fi-rr-lock-alt.svg",
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: ElevatedButton(
-                                style: ButtonStyle(
-                                  shape:
-                                      MaterialStateProperty.all<OutlinedBorder>(
-                                          RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(33))),
-                                ),
-                                onPressed: () {},
-                                child: Text(
-                                  "LOGIN",
-                                  style: TextStyle(fontSize: 24),
+                      prefixIconConstraints: BoxConstraints.tightFor(),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.only(right: 15),
+                        child: SvgPicture.asset(
+                          "assets/icons/fi-rr-eye.svg",
+                        ),
+                      ),
+                      suffixIconConstraints: BoxConstraints.tightFor(),
+                      label: Text("Password verification"),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      subtitle: Text(
+                          "I have read and agreed with the terms and conditions."),
+                      trailing: Checkbox(
+                        value: false,
+                        onChanged: (value) {},
+                        shape: CircleBorder(),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              // backgroundColor:
+                              //     MaterialStateProperty.all(Colors.deepPurple),
+                              shape: MaterialStateProperty.all<OutlinedBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(33),
                                 ),
                               ),
                             ),
-                          ],
+                            onPressed: () {
+                              
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              child: Text(
+                                "LOGIN",
+                                style: TextStyle(fontSize: 24),
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
             ElevatedButton(
