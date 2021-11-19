@@ -11,6 +11,8 @@ import 'package:thestories/presentation/pages/reading/reading_page.dart';
 import 'package:thestories/presentation/pages/search/global_search_page.dart';
 import 'package:thestories/presentation/pages/settings/settings_page.dart';
 import 'package:thestories/presentation/pages/settings/subpages/account_settings_page.dart';
+import 'package:thestories/presentation/pages/settings/subpages/bookmarks_settings_page.dart';
+import 'package:thestories/presentation/pages/settings/subpages/notification_settings_page.dart';
 import 'package:thestories/presentation/pages/special_story/special_story.dart';
 import 'package:thestories/presentation/pages/stories/stories_page.dart';
 
@@ -50,6 +52,10 @@ import 'package:thestories/presentation/pages/stories/stories_page.dart';
     AutoRoute(
       page: AccountSettingsScreen,
     ),
+    AutoRoute(
+      page: NotificationSettingsScreen,
+    ),
+    AutoRoute(page: BookmarksSettingsScreen),
     AutoRoute(
       page: ComposeStoryScreen,
     ),

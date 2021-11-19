@@ -19,3 +19,5 @@ const String cover_for_story_template = "https://via.placeholder.com/1360x768";
 
 const String cover_for_stories_template =
     "https://via.placeholder.com/2700x4100";
+
+class AppUser {}

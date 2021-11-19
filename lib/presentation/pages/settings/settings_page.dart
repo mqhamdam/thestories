@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
@@ -5,6 +6,7 @@ import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
+import 'package:thestories/presentation/custom_widgets/custom_dialog.dart';
 import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -90,6 +92,9 @@ class SettingsScreen extends StatelessWidget {
                           ),
                         ),
                         ListTile(
+                          onTap: () {
+                            BookmarksSettingsScreenRoute().show(context);
+                          },
                           title: Text("Bookmarks"),
                           leading: SvgPicture.asset(
                             "assets/icons/fi-rr-bookmark.svg",
@@ -97,6 +102,9 @@ class SettingsScreen extends StatelessWidget {
                           ),
                         ),
                         ListTile(
+                          onTap: () {
+                            NotificationSettingsScreenRoute().show(context);
+                          },
                           title: Text("Notifications"),
                           leading: SvgPicture.asset(
                             "assets/icons/fi-rr-bell.svg",
@@ -139,6 +147,16 @@ class SettingsScreen extends StatelessWidget {
                           ),
                         ),
                         ListTile(
+                          onTap: () {
+                            showModal(
+                                context: context,
+                                builder: (context) {
+                                  return AboutDialog();
+                                },
+                                configuration: FadeScaleTransitionConfiguration(
+                                    transitionDuration:
+                                        Duration(milliseconds: 500)));
+                          },
                           title: Text("App Information"),
                           leading: SvgPicture.asset(
                             "assets/icons/fi-rr-info.svg",
