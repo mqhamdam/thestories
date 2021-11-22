@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inner_drawer/inner_drawer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -9,7 +8,6 @@ import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
 import 'package:thestories/presentation/pages/reading/widgets/reading_body.dart';
 import 'package:thestories/presentation/pages/reading/widgets/reading_drawer.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class ReadingScreen extends StatefulWidget {
   const ReadingScreen({Key? key}) : super(key: key);
@@ -60,8 +58,7 @@ class _ReadingScreenState extends State<ReadingScreen>
           leading: const CustomBackButton(),
           title: GestureDetector(
             onTap: () {
-              AutoRouter.innerRouterOf(context, StoriesScreenRoute.name)!
-                  .push(const ProfileScreenRoute());
+             
             },
             child: Row(
               children: [

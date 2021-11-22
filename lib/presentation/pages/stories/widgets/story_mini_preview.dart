@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
+import 'package:thestories/presentation/pages/reading/reading_page.dart';
 
 class StoryMiniPreview extends StatelessWidget {
   const StoryMiniPreview({Key? key}) : super(key: key);
@@ -32,7 +34,12 @@ class StoryMiniPreview extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    pushNewScreen(
+                      context,
+                      screen: const ReadingScreen(),
+                    );
+                  },
                   child: Row(
                     children: [
                       const Text('Read', style: TextStyle(color: Colors.white)),
@@ -40,8 +47,9 @@ class StoryMiniPreview extends StatelessWidget {
                         width: 20,
                       ),
                       SvgPicture.asset(
-                          'assets/icons/fi-rr-angle-double-small-right.svg',
-                          color: Colors.white,),
+                        'assets/icons/fi-rr-angle-double-small-right.svg',
+                        color: Colors.white,
+                      ),
                     ],
                   ),
                 ),
@@ -55,21 +63,27 @@ class StoryMiniPreview extends StatelessWidget {
             const Divider(),
             Row(
               children: const [
-                Text('2021. 10. 21 07:07',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        color: Colors.black87,
-                        fontSize: 10,),),
+                Text(
+                  '2021. 10. 21 07:07',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black87,
+                    fontSize: 10,
+                  ),
+                ),
                 Spacer(),
                 CustomAvatar(imgUrl: avatarURLTemp, radius: 10),
                 SizedBox(
                   width: 10,
                 ),
-                Text('By @username',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w300,
-                        color: Colors.black87,
-                        fontSize: 10,),),
+                Text(
+                  'By @username',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black87,
+                    fontSize: 10,
+                  ),
+                ),
               ],
             )
           ],

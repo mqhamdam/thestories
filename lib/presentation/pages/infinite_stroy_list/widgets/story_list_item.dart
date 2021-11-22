@@ -1,9 +1,7 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class StoryListItem extends StatelessWidget {
   const StoryListItem({Key? key}) : super(key: key);
@@ -56,7 +54,7 @@ class StoryListItem extends StatelessWidget {
                 const Spacer(),
                 ElevatedButton(
                   onPressed: () {
-                    AutoRouter.of(context).push(const ReadingScreenRoute());
+                    // Navigator.of(context).push();
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.black),

@@ -59,7 +59,7 @@ class SeriesHorMiniPreview extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(22),
                           child: Image.network(
-                            coverStoryTemp,
+                            coverSeriesTemp,
                             fit: BoxFit.fitHeight,
                           ),
                         ),

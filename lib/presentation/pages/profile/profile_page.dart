@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:thestories/data/dummy_data.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -161,7 +160,6 @@ class ProfileScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.black),
                             ),
                             onPressed: () {
-                              const AchievementsScreenRoute().show(context);
                             },
                           ),
                         ),

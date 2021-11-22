@@ -6,6 +6,7 @@ import 'package:thestories/presentation/my_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  //re run build
   await Firebase.initializeApp();
   // ! ACTIVE WHEN IN PROD
   // await FirebaseAppCheck.instance

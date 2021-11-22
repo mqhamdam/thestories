@@ -10,9 +10,10 @@ class GlobalSearchScreen extends StatelessWidget {
     final isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
 
-    return Padding(
-      padding: const EdgeInsets.only(top: 5.0),
-      child: FloatingSearchBar(
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.only(top: 5.0),
+        child: FloatingSearchBar(
           //elevation: 1,
           borderRadius: BorderRadius.circular(33),
           // isScrollControlled: true,
@@ -31,9 +32,7 @@ class GlobalSearchScreen extends StatelessWidget {
           // animating between opened and closed stated.
           transition: CircularFloatingSearchBarTransition(),
           actions: [
-            FloatingSearchBarAction.searchToClear(
-              
-            ),
+            FloatingSearchBarAction.searchToClear(),
           ],
           builder: (context, transition) {
             return ClipRRect(
@@ -43,14 +42,19 @@ class GlobalSearchScreen extends StatelessWidget {
                 elevation: 4.0,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
-                  children: Colors.accents.map((color) {
-                    return Container(height: 112, color: color);
-                  }).toList(),
+                  children: Colors.accents.map(
+                    (color) {
+                      return Container(height: 112, color: color);
+                    },
+                  ).toList(),
                 ),
               ),
             );
           },
-          body: const GlobalSearchBody(),),
+
+          body: const GlobalSearchBody(),
+        ),
+      ),
     );
   }
 }

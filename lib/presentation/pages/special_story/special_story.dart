@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
 import 'package:thestories/presentation/pages/stories/widgets/story_mini_preview.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class SpecialStoryScreen extends StatelessWidget {
   const SpecialStoryScreen({Key? key}) : super(key: key);
@@ -45,7 +44,6 @@ class SpecialStoryScreen extends StatelessWidget {
                       const Spacer(),
                       IconButton(
                         onPressed: () {
-                          const InfiniteStoryListScreenRoute().show(context);
                         },
                         icon: SvgPicture.asset(
                           'assets/icons/fi-rr-angle-right.svg',
@@ -59,7 +57,6 @@ class SpecialStoryScreen extends StatelessWidget {
                 const Divider(),
                 TextButton(
                   onPressed: () {
-                    const InfiniteStoryListScreenRoute().show(context);
                   },
                   child: const Text('See all'),
                 ),

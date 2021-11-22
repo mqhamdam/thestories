@@ -5,7 +5,6 @@ import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -87,7 +86,7 @@ class SettingsScreen extends StatelessWidget {
                       tiles: [
                         ListTile(
                           onTap: () {
-                            const AccountSettingsScreenRoute().show(context);
+                           
                           },
                           title: const Text('Account'),
                           leading: SvgPicture.asset(
@@ -97,7 +96,7 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         ListTile(
                           onTap: () {
-                            const BookmarksSettingsScreenRoute().show(context);
+                           
                           },
                           title: const Text('Bookmarks'),
                           leading: SvgPicture.asset(
@@ -107,8 +106,7 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         ListTile(
                           onTap: () {
-                            const NotificationSettingsScreenRoute()
-                                .show(context);
+                           
                           },
                           title: const Text('Notifications'),
                           leading: SvgPicture.asset(

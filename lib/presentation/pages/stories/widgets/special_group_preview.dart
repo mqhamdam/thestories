@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:thestories/data/dummy_data.dart';
+import 'package:thestories/presentation/pages/infinite_stroy_list/infinite_story_list_page.dart';
 
 class SpecialGroupMiniPreview extends StatelessWidget {
   const SpecialGroupMiniPreview({Key? key}) : super(key: key);
@@ -36,11 +38,18 @@ class SpecialGroupMiniPreview extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    pushNewScreen(
+                      context,
+                      screen: const InfiniteStoryListScreen(),
+                    );
+                  },
                   child: Row(
                     children: [
-                      const Text('241 Stories',
-                          style: TextStyle(color: Colors.white),),
+                      const Text(
+                        '241 Stories',
+                        style: TextStyle(color: Colors.white),
+                      ),
                       const SizedBox(
                         width: 20,
                       ),

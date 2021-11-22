@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
+import 'package:thestories/presentation/pages/infinite_stroy_list/infinite_story_list_page.dart';
+import 'package:thestories/presentation/pages/special_story/special_story.dart';
 import 'package:thestories/presentation/pages/stories/widgets/special_group_preview.dart';
 import 'package:thestories/presentation/pages/stories/widgets/story_mini_preview.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class StoriesScreen extends StatelessWidget {
   const StoriesScreen({Key? key}) : super(key: key);
@@ -24,19 +26,22 @@ class StoriesScreen extends StatelessWidget {
               centerTitle: true,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(33),
-                    bottomRight: Radius.circular(33),),
+                  bottomLeft: Radius.circular(33),
+                  bottomRight: Radius.circular(33),
+                ),
               ),
               floating: true,
               backgroundColor: Colors.white,
-              title: Text('The Stories',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'IMFellEnglish',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                    letterSpacing: 3,
-                  ),),
+              title: Text(
+                'The Stories',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'IMFellEnglish',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  letterSpacing: 3,
+                ),
+              ),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
@@ -66,11 +71,12 @@ class StoriesScreen extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  // show 10 last public stories
+                  // show 10 new public stories
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33),),
+                      borderRadius: BorderRadius.circular(33),
+                    ),
                     child: Column(
                       children: [
                         Padding(
@@ -91,11 +97,14 @@ class StoriesScreen extends StatelessWidget {
                               const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  const InfiniteStoryListScreenRoute()
-                                      .show(context);
+                                  pushNewScreen(
+                                    context,
+                                    screen: const InfiniteStoryListScreen(),
+                                  );
                                 },
                                 icon: SvgPicture.asset(
-                                    'assets/icons/fi-rr-angle-right.svg',),
+                                  'assets/icons/fi-rr-angle-right.svg',
+                                ),
                               ),
                             ],
                           ),
@@ -105,7 +114,10 @@ class StoriesScreen extends StatelessWidget {
                         const Divider(),
                         TextButton(
                           onPressed: () {
-                            const InfiniteStoryListScreenRoute().show(context);
+                            pushNewScreen(
+                              context,
+                              screen: const InfiniteStoryListScreen(),
+                            );
                           },
                           child: const Text('See all'),
                         ),
@@ -122,7 +134,8 @@ class StoriesScreen extends StatelessWidget {
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33),),
+                      borderRadius: BorderRadius.circular(33),
+                    ),
                     child: Column(
                       children: [
                         Padding(
@@ -143,11 +156,14 @@ class StoriesScreen extends StatelessWidget {
                               const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  const InfiniteStoryListScreenRoute()
-                                      .show(context);
+                                  pushNewScreen(
+                                    context,
+                                    screen: const InfiniteStoryListScreen(),
+                                  );
                                 },
                                 icon: SvgPicture.asset(
-                                    'assets/icons/fi-rr-angle-right.svg',),
+                                  'assets/icons/fi-rr-angle-right.svg',
+                                ),
                               ),
                             ],
                           ),
@@ -157,7 +173,10 @@ class StoriesScreen extends StatelessWidget {
                         const Divider(),
                         TextButton(
                           onPressed: () {
-                            const InfiniteStoryListScreenRoute().show(context);
+                            pushNewScreen(
+                              context,
+                              screen: const InfiniteStoryListScreen(),
+                            );
                           },
                           child: const Text('See all'),
                         ),
@@ -173,7 +192,8 @@ class StoriesScreen extends StatelessWidget {
                   // show 10 last public stories
                   Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33),),
+                      borderRadius: BorderRadius.circular(33),
+                    ),
                     child: Column(
                       children: [
                         Padding(
@@ -194,10 +214,14 @@ class StoriesScreen extends StatelessWidget {
                               const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  const SpecialStoryScreenRoute().show(context);
+                                  pushNewScreen(
+                                    context,
+                                    screen: const SpecialStoryScreen(),
+                                  );
                                 },
                                 icon: SvgPicture.asset(
-                                    'assets/icons/fi-rr-angle-right.svg',),
+                                  'assets/icons/fi-rr-angle-right.svg',
+                                ),
                               ),
                             ],
                           ),
@@ -206,7 +230,12 @@ class StoriesScreen extends StatelessWidget {
                           const SpecialGroupMiniPreview(),
                         const Divider(),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            pushNewScreen(
+                              context,
+                              screen: const SpecialStoryScreen(),
+                            );
+                          },
                           child: const Text('See all'),
                         ),
                       ],

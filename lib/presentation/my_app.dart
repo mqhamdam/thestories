@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:thestories/presentation/routes/app_router.dart';
 
-import 'routes/app_router.gr.dart';
 import 'theme/theme_barrier.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
-  final _appRouter = AppRouter();
+  final _appRouter = RouteGenerator();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ligthTheme(),
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+      initialRoute: '/',
+      onGenerateRoute: _appRouter.generateRoute,
     );
   }
 }
