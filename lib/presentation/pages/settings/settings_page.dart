@@ -2,9 +2,14 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
+import 'package:thestories/presentation/pages/settings/subpages/account_settings_page.dart';
+import 'package:thestories/presentation/pages/settings/subpages/bookmarks_settings_page.dart';
+import 'package:thestories/presentation/pages/settings/subpages/notification_settings_page.dart';
+import 'package:thestories/presentation/pages/settings/subpages/storage_settings_page.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -86,7 +91,10 @@ class SettingsScreen extends StatelessWidget {
                       tiles: [
                         ListTile(
                           onTap: () {
-                           
+                            pushNewScreen(
+                              context,
+                              screen: const AccountSettingsScreen(),
+                            );
                           },
                           title: const Text('Account'),
                           leading: SvgPicture.asset(
@@ -96,7 +104,10 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         ListTile(
                           onTap: () {
-                           
+                            pushNewScreen(
+                              context,
+                              screen: const BookmarksSettingsScreen(),
+                            );
                           },
                           title: const Text('Bookmarks'),
                           leading: SvgPicture.asset(
@@ -106,7 +117,10 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         ListTile(
                           onTap: () {
-                           
+                            pushNewScreen(
+                              context,
+                              screen: const NotificationSettingsScreen(),
+                            );
                           },
                           title: const Text('Notifications'),
                           leading: SvgPicture.asset(
@@ -115,6 +129,12 @@ class SettingsScreen extends StatelessWidget {
                           ),
                         ),
                         ListTile(
+                          onTap: () {
+                            pushNewScreen(
+                              context,
+                              screen: const StorageSettingsScreen(),
+                            );
+                          },
                           title: const Text('Storage'),
                           leading: SvgPicture.asset(
                             'assets/icons/fi-rr-database.svg',
@@ -135,7 +155,8 @@ class SettingsScreen extends StatelessWidget {
               ),
               Card(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(33),),
+                  borderRadius: BorderRadius.circular(33),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -152,14 +173,15 @@ class SettingsScreen extends StatelessWidget {
                         ListTile(
                           onTap: () {
                             showModal(
-                                context: context,
-                                builder: (context) {
-                                  return const AboutDialog();
-                                },
-                                configuration:
-                                    const FadeScaleTransitionConfiguration(
-                                        transitionDuration:
-                                            Duration(milliseconds: 500),),);
+                              context: context,
+                              builder: (context) {
+                                return const AboutDialog();
+                              },
+                              configuration:
+                                  const FadeScaleTransitionConfiguration(
+                                transitionDuration: Duration(milliseconds: 500),
+                              ),
+                            );
                           },
                           title: const Text('App Information'),
                           leading: SvgPicture.asset(
@@ -179,7 +201,8 @@ class SettingsScreen extends StatelessWidget {
                   onTap: () {},
                   child: Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33),),
+                      borderRadius: BorderRadius.circular(33),
+                    ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
