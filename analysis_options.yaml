@@ -1,4 +1,4 @@
-#! ---------------- STRICT VERISON OF DART ANALYZER
+#! ---------------- STRICT VERSION OF DART ANALYZER
 
 # This file configures the analyzer, which statically analyzes Dart code to
 # check for errors, warnings, and lints.
