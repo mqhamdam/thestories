@@ -40,6 +40,9 @@ dependencies:
   firebase_app_check: ^0.0.2+2
   firebase_performance: "^0.7.1+1"
   # //
+  sentry_flutter: ^6.1.2 # SENTRY package to analyze collect erorrs and bugs
+  flutter_markdown: ^0.6.8
+  persistent_bottom_nav_bar: ^4.0.2
   auto_route: ^2.4.2
   flutter_svg: ^0.23.0+1
   dartz: ^0.10.0 # -- Package for helping to implement functional Programming
