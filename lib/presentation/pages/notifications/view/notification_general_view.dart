@@ -14,19 +14,20 @@ class NotificationGeneralView extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                title: Text("Congatulations!"),
-                subtitle: Text("You have got a new achievement!"),
-                trailing: SvgPicture.asset("assets/icons/fi-rr-trophy.svg"),
+                title: const Text('Congatulations!'),
+                subtitle: const Text('You have got a new achievement!'),
+                trailing: SvgPicture.asset('assets/icons/fi-rr-trophy.svg'),
               ),
             ),
           );
         },
         separatorBuilder: (context, index) {
-          if (index % 2 == 0)
-            return Text("Date");
-          else
+          if (index.isEven) {
+            return const Text('Date');
+          } else {
             return Container();
+          }
         },
-        itemCount: 50);
+        itemCount: 50,);
   }
 }

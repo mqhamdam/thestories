@@ -13,11 +13,11 @@ class ComposeStoryScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () => AutoRouter.of(context).pop(),
-          icon: SvgPicture.asset("assets/icons/fi-rr-angle-left.svg"),
+          icon: SvgPicture.asset('assets/icons/fi-rr-angle-left.svg'),
         ),
         centerTitle: false,
-        title: Text(
-          "Compose Story",
+        title: const Text(
+          'Compose Story',
           style: TextStyle(color: Colors.black),
         ),
         actions: [
@@ -33,20 +33,22 @@ class ComposeStoryScreen extends StatelessWidget {
                 ),
               ),
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/fi-rr-broom.svg"),
-              label: Text("Refresh", style: TextStyle(color: Colors.black)),
+              icon: SvgPicture.asset('assets/icons/fi-rr-broom.svg'),
+              label:
+                  const Text('Refresh', style: TextStyle(color: Colors.black)),
             ),
           ),
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset("assets/icons/fi-rr-info.svg"),
+            icon: SvgPicture.asset('assets/icons/fi-rr-info.svg'),
           ),
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),),
         child: Card(
-          margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+          margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(33),
           ),
@@ -56,7 +58,7 @@ class ComposeStoryScreen extends StatelessWidget {
               children: [
                 Card(
                   elevation: 5.0,
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     horizontal: 5,
                   ),
                   shape: RoundedRectangleBorder(
@@ -69,15 +71,18 @@ class ComposeStoryScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Content",
+                            const Text(
+                              'Content',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
                               icon: SvgPicture.asset(
-                                  "assets/icons/fi-rr-info.svg"),
+                                'assets/icons/fi-rr-info.svg',
+                              ),
                             ),
                           ],
                         ),
@@ -86,7 +91,7 @@ class ComposeStoryScreen extends StatelessWidget {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(33),
                             ),
-                            label: Text("Story Title"),
+                            label: const Text('Story Title'),
                           ),
                           maxLength: 20,
                         ),
@@ -95,7 +100,7 @@ class ComposeStoryScreen extends StatelessWidget {
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(33),
                             ),
-                            label: Text("Story Body"),
+                            label: const Text('Story Body'),
                           ),
                           maxLength: 500,
                         ),
@@ -113,8 +118,8 @@ class ComposeStoryScreen extends StatelessWidget {
                                   ),
                                 ),
                                 onPressed: () {},
-                                child: Text(
-                                  "Attach a cover",
+                                child: const Text(
+                                  'Attach a cover',
                                   style: TextStyle(color: Colors.white),
                                 ),
                               ),
@@ -127,7 +132,8 @@ class ComposeStoryScreen extends StatelessWidget {
                 ),
                 Card(
                   elevation: 5.0,
-                  margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(33),
                   ),
@@ -138,22 +144,25 @@ class ComposeStoryScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Series",
+                            const Text(
+                              'Series',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
                               icon: SvgPicture.asset(
-                                  "assets/icons/fi-rr-info.svg"),
+                                'assets/icons/fi-rr-info.svg',
+                              ),
                             ),
                           ],
                         ),
                         CheckboxListTile(
                           secondary:
-                              SvgPicture.asset("assets/icons/fi-rr-film.svg"),
-                          title: Text("Add to Series"),
+                              SvgPicture.asset('assets/icons/fi-rr-film.svg'),
+                          title: const Text('Add to Series'),
                           onChanged: (e) {},
                           value: true,
                         ),
@@ -166,11 +175,12 @@ class ComposeStoryScreen extends StatelessWidget {
                               padding:
                                   const EdgeInsets.only(left: 5.0, right: 15),
                               child: SvgPicture.asset(
-                                "assets/icons/fi-rr-search-alt.svg",
+                                'assets/icons/fi-rr-search-alt.svg',
                               ),
                             ),
-                            suffixIconConstraints: BoxConstraints.tightFor(),
-                            label: Text("Search series.."),
+                            suffixIconConstraints:
+                                const BoxConstraints.tightFor(),
+                            label: const Text('Search series..'),
                           ),
                           maxLength: 500,
                         ),
@@ -180,7 +190,8 @@ class ComposeStoryScreen extends StatelessWidget {
                 ),
                 Card(
                   elevation: 5.0,
-                  margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(33),
                   ),
@@ -191,22 +202,26 @@ class ComposeStoryScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Meta Data",
+                            const Text(
+                              'Meta Data',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
                               icon: SvgPicture.asset(
-                                  "assets/icons/fi-rr-info.svg"),
+                                'assets/icons/fi-rr-info.svg',
+                              ),
                             ),
                           ],
                         ),
                         CheckboxListTile(
                           secondary: SvgPicture.asset(
-                              "assets/icons/fi-rr-magic-wand.svg"),
-                          title: Text("Fiction"),
+                            'assets/icons/fi-rr-magic-wand.svg',
+                          ),
+                          title: const Text('Fiction'),
                           onChanged: (e) {},
                           value: true,
                         ),
@@ -219,11 +234,12 @@ class ComposeStoryScreen extends StatelessWidget {
                               padding:
                                   const EdgeInsets.only(left: 15.0, right: 5),
                               child: SvgPicture.asset(
-                                "assets/icons/fi-rr-hastag.svg",
+                                'assets/icons/fi-rr-hastag.svg',
                               ),
                             ),
-                            prefixIconConstraints: BoxConstraints.tightFor(),
-                            label: Text("Tags"),
+                            prefixIconConstraints:
+                                const BoxConstraints.tightFor(),
+                            label: const Text('Tags'),
                           ),
                           maxLength: 500,
                         ),
@@ -233,7 +249,8 @@ class ComposeStoryScreen extends StatelessWidget {
                 ),
                 Card(
                   elevation: 5.0,
-                  margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(33),
                   ),
@@ -244,44 +261,48 @@ class ComposeStoryScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Visibility",
+                            const Text(
+                              'Visibility',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
                               icon: SvgPicture.asset(
-                                  "assets/icons/fi-rr-info.svg"),
+                                'assets/icons/fi-rr-info.svg',
+                              ),
                             ),
                           ],
                         ),
                         CheckboxListTile(
                           secondary: SvgPicture.asset(
-                              "assets/icons/fi-rr-incognito.svg"),
-                          title: Text("Anonymous"),
+                            'assets/icons/fi-rr-incognito.svg',
+                          ),
+                          title: const Text('Anonymous'),
                           onChanged: (e) {},
                           value: false,
                         ),
-                        Divider(),
+                        const Divider(),
                         CheckboxListTile(
                           secondary:
-                              SvgPicture.asset("assets/icons/fi-rr-world.svg"),
-                          title: Text("Public"),
+                              SvgPicture.asset('assets/icons/fi-rr-world.svg'),
+                          title: const Text('Public'),
                           onChanged: (e) {},
                           value: false,
                         ),
                         CheckboxListTile(
                           secondary:
-                              SvgPicture.asset("assets/icons/fi-rr-shield.svg"),
-                          title: Text("Private"),
+                              SvgPicture.asset('assets/icons/fi-rr-shield.svg'),
+                          title: const Text('Private'),
                           onChanged: (e) {},
                           value: true,
                         ),
                         CheckboxListTile(
                           secondary:
-                              SvgPicture.asset("assets/icons/fi-rr-star.svg"),
-                          title: Text("Special"),
+                              SvgPicture.asset('assets/icons/fi-rr-star.svg'),
+                          title: const Text('Special'),
                           onChanged: (e) {},
                           value: false,
                         ),
@@ -290,7 +311,8 @@ class ComposeStoryScreen extends StatelessWidget {
                   ),
                 ),
                 Card(
-                  margin: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                  margin:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                   elevation: 5.0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(33),
@@ -302,41 +324,44 @@ class ComposeStoryScreen extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Comments",
+                            const Text(
+                              'Comments',
                               style: TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 20),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
                             ),
                             IconButton(
                               onPressed: () {},
                               icon: SvgPicture.asset(
-                                  "assets/icons/fi-rr-info.svg"),
+                                'assets/icons/fi-rr-info.svg',
+                              ),
                             ),
                           ],
                         ),
                         CheckboxListTile(
                           secondary: SvgPicture.asset(
-                              "assets/icons/fi-rr-comments.svg"),
-                          title: Text("Allow Comments"),
+                            'assets/icons/fi-rr-comments.svg',
+                          ),
+                          title: const Text('Allow Comments'),
                           onChanged: (e) {},
                           value: true,
                         ),
                         CheckboxListTile(
                           secondary:
-                              SvgPicture.asset("assets/icons/fi-rr-lock.svg"),
-                          title: Text("Only Subscribers"),
+                              SvgPicture.asset('assets/icons/fi-rr-lock.svg'),
+                          title: const Text('Only Subscribers'),
                           onChanged: (e) {},
                           value: true,
                         ),
                         Row(
                           children: [
-                            Text("Allow Read if:"),
+                            const Text('Allow Read if:'),
                             Expanded(
                               child: Slider(
-                                label: "Read",
+                                label: 'Read',
                                 value: 23,
                                 onChanged: (e) {},
-                                min: 0.0,
                                 max: 999,
                               ),
                             ),
@@ -344,13 +369,12 @@ class ComposeStoryScreen extends StatelessWidget {
                         ),
                         Row(
                           children: [
-                            Text("Allow Write if:"),
+                            const Text('Allow Write if:'),
                             Expanded(
                               child: Slider(
-                                label: "Read",
+                                label: 'Read',
                                 value: 23,
                                 onChanged: (e) {},
-                                min: 0.0,
                                 max: 999,
                               ),
                             ),
@@ -374,13 +398,13 @@ class ComposeStoryScreen extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {},
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(
                             horizontal: 8.0,
                             vertical: 15,
                           ),
                           child: Text(
-                            "Post",
+                            'Post',
                             style: TextStyle(color: Colors.white),
                           ),
                         ),

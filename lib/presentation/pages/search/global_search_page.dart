@@ -18,7 +18,6 @@ class GlobalSearchScreen extends StatelessWidget {
           // isScrollControlled: true,
           hint: 'Start searching with @ or #',
           scrollPadding: const EdgeInsets.only(top: 10, bottom: 56),
-          transitionDuration: const Duration(milliseconds: 500),
           transitionCurve: Curves.easeInOut,
           physics: const BouncingScrollPhysics(),
           axisAlignment: isPortrait ? 0.0 : -1.0,
@@ -33,7 +32,7 @@ class GlobalSearchScreen extends StatelessWidget {
           transition: CircularFloatingSearchBarTransition(),
           actions: [
             FloatingSearchBarAction.searchToClear(
-              showIfClosed: true,
+              
             ),
           ],
           builder: (context, transition) {
@@ -51,7 +50,7 @@ class GlobalSearchScreen extends StatelessWidget {
               ),
             );
           },
-          body: GlobalSearchBody()),
+          body: const GlobalSearchBody(),),
     );
   }
 }

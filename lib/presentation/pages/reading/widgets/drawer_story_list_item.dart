@@ -8,16 +8,16 @@ class DrawerStoryListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text("Story Header"),
-      subtitle: Text(
-        "Story  body(max2 line)" + story_body_dummy_data,
+      title: const Text('Story Header'),
+      subtitle: const Text(
+        'Story  body(max2 line) $storyBodyTemp',
         maxLines: 3,
       ),
       isThreeLine: true,
       trailing: IconButton(
         onPressed: () {},
         icon: SvgPicture.asset(
-          "assets/icons/fi-rr-bookmark.svg",
+          'assets/icons/fi-rr-bookmark.svg',
           color: Colors.green,
         ),
       ),

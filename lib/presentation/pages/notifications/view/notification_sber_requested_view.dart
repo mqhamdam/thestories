@@ -8,8 +8,8 @@ class NFSubscriberRequestedView extends StatelessWidget {
     return ListView.separated(
       separatorBuilder: (context, index) {
         if (index % 5 == 0) {
-          return Card(
-            child: Text(" Date "),
+          return const Card(
+            child: Text(' Date '),
           );
         } else {
           return Container();
@@ -26,31 +26,31 @@ class NFSubscriberRequestedView extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    CircleAvatar(),
-                    SizedBox(
+                    const CircleAvatar(),
+                    const SizedBox(
                       width: 10,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Name"),
-                        Text("@username"),
+                      children: const [
+                        Text('Name'),
+                        Text('@username'),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
-                    Spacer(),
+                    const Spacer(),
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all(Colors.green),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(33),
-                        )),
+                        ),),
                       ),
                       onPressed: () {},
-                      child: Text("Accept"),
+                      child: const Text('Accept'),
                     ),
                   ],
                 ),

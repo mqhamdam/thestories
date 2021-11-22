@@ -7,7 +7,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
-import 'package:thestories/presentation/pages/profile/profile_page.dart';
 import 'package:thestories/presentation/pages/reading/widgets/reading_body.dart';
 import 'package:thestories/presentation/pages/reading/widgets/reading_drawer.dart';
 import 'package:thestories/presentation/routes/app_router.gr.dart';
@@ -28,7 +27,7 @@ class _ReadingScreenState extends State<ReadingScreen>
   void initState() {
     _animatedDrawerIcon = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
     );
     super.initState();
   }
@@ -55,26 +54,25 @@ class _ReadingScreenState extends State<ReadingScreen>
       key: _innerDrawerKey,
       swipeChild: true,
       rightAnimationType: InnerDrawerAnimation.quadratic,
-      rightChild: ReadingDrawer(),
+      rightChild: const ReadingDrawer(),
       scaffold: Scaffold(
         appBar: AppBar(
-          leading: CustomBackButton(),
+          leading: const CustomBackButton(),
           title: GestureDetector(
             onTap: () {
               AutoRouter.innerRouterOf(context, StoriesScreenRoute.name)!
-                  .push(ProfileScreenRoute());
+                  .push(const ProfileScreenRoute());
             },
             child: Row(
               children: [
-                CustomAvatar(imgUrl: avatar_url_template, radius: 23),
+                const CustomAvatar(imgUrl: avatarURLTemp, radius: 23),
                 Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
-                        "This is user name",
+                        'This is user name',
                         style: TextStyle(
                           fontSize: 16,
                           color: Colors.black,
@@ -82,8 +80,8 @@ class _ReadingScreenState extends State<ReadingScreen>
                         ),
                       ),
                       Text(
-                        "@this is user id",
-                        style: TextStyle(fontSize: 10, color: Colors.black
+                        '@this is user id',
+                        style: TextStyle(fontSize: 10, color: Colors.black,
                             // fontWeight: FontWeight.w200,
                             ),
                       ),
@@ -96,8 +94,8 @@ class _ReadingScreenState extends State<ReadingScreen>
           actions: [
             IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/fi-rr-bookmark.svg",
-                  color: Colors.green),
+              icon: SvgPicture.asset('assets/icons/fi-rr-bookmark.svg',
+                  color: Colors.green,),
             ),
             IconButton(
                 onPressed: () {
@@ -106,47 +104,47 @@ class _ReadingScreenState extends State<ReadingScreen>
                 icon: AnimatedIcon(
                     icon: AnimatedIcons.menu_close,
                     color: Colors.black,
-                    progress: _animatedDrawerIcon)),
+                    progress: _animatedDrawerIcon,),),
           ],
         ),
         body: ReadingBody(),
         bottomSheet: Material(
           elevation: 8,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(33))),
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(33),),),
           child: Padding(
             padding: const EdgeInsets.only(
                 top: kToolbarHeight / 6,
                 bottom: kToolbarHeight / 6,
                 right: 10,
-                left: 10),
+                left: 10,),
             child: Row(
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg"),
+                  icon: SvgPicture.asset('assets/icons/fi-rr-thumbs-up.svg'),
                 ),
-                Text("230"),
-                SizedBox(
+                const Text('230'),
+                const SizedBox(
                   width: 20,
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset("assets/icons/fi-rr-thumbs-down.svg"),
+                  icon: SvgPicture.asset('assets/icons/fi-rr-thumbs-down.svg'),
                 ),
-                Text("230"),
-                SizedBox(
+                const Text('230'),
+                const SizedBox(
                   width: 20,
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset("assets/icons/fi-rr-comments.svg"),
+                  icon: SvgPicture.asset('assets/icons/fi-rr-comments.svg'),
                 ),
-                Text("230"),
-                Spacer(),
+                const Text('230'),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset("assets/icons/fi-rr-menu-dots.svg"),
+                  icon: SvgPicture.asset('assets/icons/fi-rr-menu-dots.svg'),
                 ),
               ],
             ),

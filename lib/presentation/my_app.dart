@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:thestories/presentation/routes/app_router.gr.dart';
-import 'package:thestories/presentation/theme/theme_barrier.dart';
+
+import 'routes/app_router.gr.dart';
+import 'theme/theme_barrier.dart';
 
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);

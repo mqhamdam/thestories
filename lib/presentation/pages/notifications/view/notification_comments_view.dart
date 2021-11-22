@@ -17,54 +17,54 @@ class NCommentsView extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  CircleAvatar(),
-                  SizedBox(
+                  const CircleAvatar(),
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Name"),
-                      Text("@username"),
+                    children: const [
+                      Text('Name'),
+                      Text('@username'),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(DateTime.now().toString()),
                 ],
               ),
-              Divider(),
+              const Divider(),
               Row(
                 children: [
                   SvgPicture.asset(
-                    "assets/icons/fi-rr-comment.svg",
+                    'assets/icons/fi-rr-comment.svg',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
-                  Text("This is Comment"),
+                  const Text('This is Comment'),
                 ],
               ),
-              Divider(),
+              const Divider(),
               Row(
                 children: [
                   SvgPicture.asset(
-                    "assets/icons/fi-rr-arrow-small-right.svg",
+                    'assets/icons/fi-rr-arrow-small-right.svg',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Story Header"),
-                      Text("Story Body\nonly twoline"),
+                    children: const [
+                      Text('Story Header'),
+                      Text('Story Body\nonly twoline'),
                     ],
                   ),
-                  Spacer(),
-                  Placeholder(
+                  const Spacer(),
+                  const Placeholder(
                     fallbackHeight: 50,
                     fallbackWidth: 100,
                   ),
@@ -74,6 +74,6 @@ class NCommentsView extends StatelessWidget {
           ),
         ),
       );
-    });
+    },);
   }
 }

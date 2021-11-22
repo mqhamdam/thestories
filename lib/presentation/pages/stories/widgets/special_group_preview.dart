@@ -15,18 +15,18 @@ class SpecialGroupMiniPreview extends StatelessWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 30,
-                  backgroundImage: NetworkImage(avatar_url_template),
+                  backgroundImage: NetworkImage(avatarURLTemp),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Column(
-                  children: [
-                    Text("Group Name"),
-                    Text("@author"),
+                  children: const [
+                    Text('Group Name'),
+                    Text('@author'),
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.black),
@@ -39,13 +39,13 @@ class SpecialGroupMiniPreview extends StatelessWidget {
                   onPressed: () {},
                   child: Row(
                     children: [
-                      Text("241 Stories",
-                          style: TextStyle(color: Colors.white)),
-                      SizedBox(
+                      const Text('241 Stories',
+                          style: TextStyle(color: Colors.white),),
+                      const SizedBox(
                         width: 20,
                       ),
                       SvgPicture.asset(
-                        "assets/icons/fi-rr-angle-small-right.svg",
+                        'assets/icons/fi-rr-angle-small-right.svg',
                         color: Colors.white,
                       ),
                     ],

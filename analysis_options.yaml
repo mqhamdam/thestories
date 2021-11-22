@@ -122,6 +122,6 @@ linter:
     use_test_throws_matchers: true
     use_to_and_as_if_applicable: true
     depend_on_referenced_packages: true
-    prefer_relative_imports: true
+    prefer_relative_imports: false
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

@@ -10,7 +10,7 @@ class InitialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-        routes: [
+        routes: const [
           StoriesScreenRoute(),
           GlobalSearchScreenRoute(),
           NotificationsScreenRoute(),
@@ -18,16 +18,16 @@ class InitialScreen extends StatelessWidget {
         ],
         bottomNavigationBuilder: (_, router) {
           return Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(30), topLeft: Radius.circular(30)),
+                  topRight: Radius.circular(30), topLeft: Radius.circular(30),),
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black38, spreadRadius: 0, blurRadius: 10),
+                    color: Colors.black38, blurRadius: 10,),
               ],
             ),
             child: ClipRRect(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30.0),
                 topRight: Radius.circular(30.0),
               ),
@@ -42,36 +42,36 @@ class InitialScreen extends StatelessWidget {
                 items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
                       icon: SvgPicture.asset(
-                        "assets/icons/fi-rr-home.svg",
+                        'assets/icons/fi-rr-home.svg',
                         color: router.activeIndex == 0
                             ? Colors.black
                             : Colors.black38,
                       ),
-                      label: ""),
+                      label: '',),
                   BottomNavigationBarItem(
                       icon: SvgPicture.asset(
-                        "assets/icons/fi-rr-search.svg",
+                        'assets/icons/fi-rr-search.svg',
                         color: router.activeIndex == 1
                             ? Colors.black
                             : Colors.black38,
                       ),
-                      label: ""),
+                      label: '',),
                   BottomNavigationBarItem(
                       icon: SvgPicture.asset(
-                        "assets/icons/fi-rr-bell.svg",
+                        'assets/icons/fi-rr-bell.svg',
                         color: router.activeIndex == 2
                             ? Colors.black
                             : Colors.black38,
                       ),
-                      label: ""),
+                      label: '',),
                   BottomNavigationBarItem(
                       icon: SvgPicture.asset(
-                        "assets/icons/fi-rr-user.svg",
+                        'assets/icons/fi-rr-user.svg',
                         color: router.activeIndex == 3
                             ? Colors.black
                             : Colors.black38,
                       ),
-                      label: ""),
+                      label: '',),
                 ],
               ),
             ),
@@ -83,10 +83,10 @@ class InitialScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             mini: true,
             onPressed: () {
-              AutoRouter.of(context).push(ComposeStoryScreenRoute());
+              AutoRouter.of(context).push(const ComposeStoryScreenRoute());
             },
             child: SvgPicture.asset(
-              "assets/icons/fi-rr-edit.svg",
+              'assets/icons/fi-rr-edit.svg',
             ),
           ),
           FloatingActionButton(
@@ -94,10 +94,10 @@ class InitialScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             mini: true,
             onPressed: () {
-              AutoRouter.of(context).push(ReadingScreenRoute());
+              AutoRouter.of(context).push(const ReadingScreenRoute());
             },
             child: SvgPicture.asset(
-              "assets/icons/fi-rr-book-alt.svg",
+              'assets/icons/fi-rr-book-alt.svg',
             ),
           ),
           FloatingActionButton(
@@ -105,13 +105,13 @@ class InitialScreen extends StatelessWidget {
             backgroundColor: Colors.white,
             mini: true,
             onPressed: () {
-              AutoRouter.of(context).push(SettingsScreenRoute());
+              AutoRouter.of(context).push(const SettingsScreenRoute());
             },
             child: SvgPicture.asset(
-              "assets/icons/fi-rr-settings.svg",
+              'assets/icons/fi-rr-settings.svg',
             ),
           ),
-        ]));
+        ],),);
   }
 }
 // FloatingActionButton( 

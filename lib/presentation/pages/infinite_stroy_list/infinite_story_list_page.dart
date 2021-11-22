@@ -10,22 +10,22 @@ class InfiniteStoryListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text("Public/Private", style: TextStyle(color: Colors.black)),
+        leading: const CustomBackButton(),
+        title: const Text('Public/Private', style: TextStyle(color: Colors.black)),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 12.0),
             child: IconButton(
               onPressed: () {},
-              icon: SvgPicture.asset("assets/icons/fi-rr-settings-sliders.svg"),
+              icon: SvgPicture.asset('assets/icons/fi-rr-settings-sliders.svg'),
             ),
           ),
         ],
       ),
       body: ListView.builder(
-        padding: EdgeInsets.only(top: 10, bottom: 10),
+        padding: const EdgeInsets.only(top: 10, bottom: 10),
         itemBuilder: (context, index) {
-          return StoryListItem();
+          return const StoryListItem();
         },
       ),
     );

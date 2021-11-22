@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_void_async
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:thestories/presentation/my_app.dart';

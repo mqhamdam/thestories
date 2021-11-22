@@ -7,7 +7,7 @@ class StorySinglePreview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
       child: Column(
         children: [
@@ -15,40 +15,42 @@ class StorySinglePreview extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Row(
               children: [
-                Text(
-                  "This is Header of Story",
+                const Text(
+                  'This is Header of Story',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
-                Spacer(),
+                const Spacer(),
                 // show card if visibility private or grouped
                 Card(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(33)),
+                    borderRadius: BorderRadius.circular(33),
+                  ),
                   color: Colors.white,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(5.0),
                     child: Text(
-                      "FRIENDS",
+                      'FRIENDS',
                       style: TextStyle(fontSize: 10, color: Colors.green),
                     ),
                   ),
                 ),
                 IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset("assets/icons/fi-rr-bookmark.svg"))
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/fi-rr-bookmark.svg'),
+                ),
               ],
             ),
           ),
-          Divider(),
+          const Divider(),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              children: [
-                Text("This is Body - for overview"),
+              children: const [
+                Text('This is Body - for overview'),
               ],
             ),
           ),
-          Placeholder(
+          const Placeholder(
             fallbackHeight: 200,
             strokeWidth: 0.5,
           ),
@@ -57,9 +59,8 @@ class StorySinglePreview extends StatelessWidget {
             child: Row(
               children: [
                 Wrap(
-                  runAlignment: WrapAlignment.start,
                   children: [
-                    SvgPicture.asset("assets/icons/fi-rr-hastag.svg"),
+                    SvgPicture.asset('assets/icons/fi-rr-hastag.svg'),
                   ],
                 ),
               ],
@@ -69,14 +70,14 @@ class StorySinglePreview extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
-                SvgPicture.asset("assets/icons/fi-rr-marker.svg"),
-                Text("Seoul, South Korea"),
-                Spacer(),
-                Text("By @username"),
+                SvgPicture.asset('assets/icons/fi-rr-marker.svg'),
+                const Text('Seoul, South Korea'),
+                const Spacer(),
+                const Text('By @username'),
               ],
             ),
           ),
-          Divider(),
+          const Divider(),
           Padding(
             padding: const EdgeInsets.only(
               left: 15,
@@ -85,22 +86,24 @@ class StorySinglePreview extends StatelessWidget {
             child: Row(
               children: [
                 TextButton.icon(
-                    onPressed: () {},
-                    icon: SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg"),
-                    label: Text("520")),
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/fi-rr-thumbs-up.svg'),
+                  label: const Text('520'),
+                ),
                 TextButton.icon(
-                    onPressed: () {},
-                    icon:
-                        SvgPicture.asset("assets/icons/fi-rr-thumbs-down.svg"),
-                    label: Text("520")),
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/fi-rr-thumbs-down.svg'),
+                  label: const Text('520'),
+                ),
                 TextButton.icon(
-                    onPressed: () {},
-                    icon: SvgPicture.asset("assets/icons/fi-rr-comments.svg"),
-                    label: Text("520")),
-                Spacer(),
+                  onPressed: () {},
+                  icon: SvgPicture.asset('assets/icons/fi-rr-comments.svg'),
+                  label: const Text('520'),
+                ),
+                const Spacer(),
                 IconButton(
                   onPressed: () {},
-                  icon: SvgPicture.asset("assets/icons/fi-rr-menu-dots.svg"),
+                  icon: SvgPicture.asset('assets/icons/fi-rr-menu-dots.svg'),
                 ),
               ],
             ),

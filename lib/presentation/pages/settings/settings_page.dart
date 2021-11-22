@@ -2,11 +2,9 @@ import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
-import 'package:fluttericon/font_awesome_icons.dart';
 import 'package:thestories/data/dummy_data.dart';
 import 'package:thestories/presentation/custom_widgets/custom_avatar.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
-import 'package:thestories/presentation/custom_widgets/custom_dialog.dart';
 import 'package:thestories/presentation/routes/app_router.gr.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -16,41 +14,45 @@ class SettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text(
-          "Settings",
+        leading: const CustomBackButton(),
+        title: const Text(
+          'Settings',
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Container(
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: SingleChildScrollView(
-          physics:
-              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
                 child: Card(
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(33)),
+                    borderRadius: BorderRadius.circular(33),
+                  ),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: CustomAvatar(
-                            imgUrl: avatar_url_template, radius: 30),
+                          imgUrl: avatarURLTemp,
+                          radius: 30,
+                        ),
                       ),
                       Column(
-                        children: [
-                          Text("User Name "),
-                          Text("Edit user info"),
+                        children: const [
+                          Text('User Name '),
+                          Text('Edit user info'),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(FontAwesome5.chevron_right),
+                        icon: const Icon(FontAwesome5.chevron_right),
                       ),
                     ],
                   ),
@@ -58,15 +60,16 @@ class SettingsScreen extends StatelessWidget {
               ),
               Card(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(33)),
+                  borderRadius: BorderRadius.circular(33),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SwitchListTile.adaptive(
                     secondary: SvgPicture.asset(
-                      "assets/icons/fi-rr-moon.svg",
+                      'assets/icons/fi-rr-moon.svg',
                       color: Colors.black,
                     ),
-                    title: Text("Switch to dark mode"),
+                    title: const Text('Switch to dark mode'),
                     value: true,
                     onChanged: (value) {},
                   ),
@@ -74,7 +77,8 @@ class SettingsScreen extends StatelessWidget {
               ),
               Card(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(33)),
+                  borderRadius: BorderRadius.circular(33),
+                ),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -83,45 +87,46 @@ class SettingsScreen extends StatelessWidget {
                       tiles: [
                         ListTile(
                           onTap: () {
-                            AccountSettingsScreenRoute().show(context);
+                            const AccountSettingsScreenRoute().show(context);
                           },
-                          title: Text("Account"),
+                          title: const Text('Account'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-id-badge.svg",
+                            'assets/icons/fi-rr-id-badge.svg',
                             color: Colors.black,
                           ),
                         ),
                         ListTile(
                           onTap: () {
-                            BookmarksSettingsScreenRoute().show(context);
+                            const BookmarksSettingsScreenRoute().show(context);
                           },
-                          title: Text("Bookmarks"),
+                          title: const Text('Bookmarks'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-bookmark.svg",
+                            'assets/icons/fi-rr-bookmark.svg',
                             color: Colors.black,
                           ),
                         ),
                         ListTile(
                           onTap: () {
-                            NotificationSettingsScreenRoute().show(context);
+                            const NotificationSettingsScreenRoute()
+                                .show(context);
                           },
-                          title: Text("Notifications"),
+                          title: const Text('Notifications'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-bell.svg",
+                            'assets/icons/fi-rr-bell.svg',
                             color: Colors.black,
                           ),
                         ),
                         ListTile(
-                          title: Text("Storage"),
+                          title: const Text('Storage'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-database.svg",
+                            'assets/icons/fi-rr-database.svg',
                             color: Colors.black,
                           ),
                         ),
                         ListTile(
-                          title: Text("History"),
+                          title: const Text('History'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-time-past.svg",
+                            'assets/icons/fi-rr-time-past.svg',
                             color: Colors.black,
                           ),
                         ),
@@ -132,7 +137,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               Card(
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(33)),
+                    borderRadius: BorderRadius.circular(33),),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
@@ -140,9 +145,9 @@ class SettingsScreen extends StatelessWidget {
                       context: context,
                       tiles: [
                         ListTile(
-                          title: Text("Q/A"),
+                          title: const Text('Q/A'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-interrogation.svg",
+                            'assets/icons/fi-rr-interrogation.svg',
                             color: Colors.black,
                           ),
                         ),
@@ -151,15 +156,16 @@ class SettingsScreen extends StatelessWidget {
                             showModal(
                                 context: context,
                                 builder: (context) {
-                                  return AboutDialog();
+                                  return const AboutDialog();
                                 },
-                                configuration: FadeScaleTransitionConfiguration(
-                                    transitionDuration:
-                                        Duration(milliseconds: 500)));
+                                configuration:
+                                    const FadeScaleTransitionConfiguration(
+                                        transitionDuration:
+                                            Duration(milliseconds: 500),),);
                           },
-                          title: Text("App Information"),
+                          title: const Text('App Information'),
                           leading: SvgPicture.asset(
-                            "assets/icons/fi-rr-info.svg",
+                            'assets/icons/fi-rr-info.svg',
                             color: Colors.black,
                           ),
                         ),
@@ -168,14 +174,14 @@ class SettingsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Divider(),
+              const Divider(),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: InkWell(
                   onTap: () {},
                   child: Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33)),
+                        borderRadius: BorderRadius.circular(33),),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
@@ -183,10 +189,9 @@ class SettingsScreen extends StatelessWidget {
                           context: context,
                           tiles: [
                             ListTile(
-                              onTap: null,
-                              title: Text("Log out"),
+                              title: const Text('Log out'),
                               leading: SvgPicture.asset(
-                                "assets/icons/fi-rr-power.svg",
+                                'assets/icons/fi-rr-power.svg',
                                 color: Colors.black,
                               ),
                             ),

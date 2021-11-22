@@ -4,6 +4,8 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
+// ignore_for_file: require_trailing_commas, cascade_invocations
+
 import 'package:cloud_firestore/cloud_firestore.dart' as _i4;
 import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;

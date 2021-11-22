@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/presentation/custom_widgets/custom_back_button.dart';
-import 'package:thestories/presentation/pages/infinite_stroy_list/widgets/story_list_item.dart';
 import 'package:thestories/presentation/pages/stories/widgets/story_mini_preview.dart';
 import 'package:thestories/presentation/routes/app_router.gr.dart';
 
@@ -12,9 +11,9 @@ class SpecialStoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text(
-          "Special Stories",
+        leading: const CustomBackButton(),
+        title: const Text(
+          'Special Stories',
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -33,35 +32,36 @@ class SpecialStoryScreen extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 25,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Text(
-                        "Group Name",
+                      const Text(
+                        'Group Name',
                         style: TextStyle(fontSize: 20),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       IconButton(
                         onPressed: () {
-                          InfiniteStoryListScreenRoute().show(context);
+                          const InfiniteStoryListScreenRoute().show(context);
                         },
                         icon: SvgPicture.asset(
-                            "assets/icons/fi-rr-angle-right.svg"),
+                          'assets/icons/fi-rr-angle-right.svg',
+                        ),
                       ),
                     ],
                   ),
                 ),
-                Divider(),
-                for (int i = 0; i < 10; i++) StoryMiniPreview(),
-                Divider(),
+                const Divider(),
+                for (int i = 0; i < 10; i++) const StoryMiniPreview(),
+                const Divider(),
                 TextButton(
                   onPressed: () {
-                    InfiniteStoryListScreenRoute().show(context);
+                    const InfiniteStoryListScreenRoute().show(context);
                   },
-                  child: Text("See all"),
+                  child: const Text('See all'),
                 ),
               ],
             ),

@@ -17,44 +17,44 @@ class VotesView extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  CircleAvatar(),
-                  SizedBox(
+                  const CircleAvatar(),
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Name"),
-                      Text("@username"),
+                    children: const [
+                      Text('Name'),
+                      Text('@username'),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(DateTime.now().toString()),
-                  Spacer(),
-                  SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg",
-                      color: Colors.green),
+                  const Spacer(),
+                  SvgPicture.asset('assets/icons/fi-rr-thumbs-up.svg',
+                      color: Colors.green,),
                 ],
               ),
-              Divider(),
+              const Divider(),
               Row(
                 children: [
                   SvgPicture.asset(
-                    "assets/icons/fi-rr-arrow-small-right.svg",
+                    'assets/icons/fi-rr-arrow-small-right.svg',
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text("Story Header"),
-                      Text("Story Body\nonly twoline"),
+                    children: const [
+                      Text('Story Header'),
+                      Text('Story Body\nonly twoline'),
                     ],
                   ),
-                  Spacer(),
-                  Placeholder(
+                  const Spacer(),
+                  const Placeholder(
                     fallbackHeight: 50,
                     fallbackWidth: 100,
                   ),
@@ -64,6 +64,6 @@ class VotesView extends StatelessWidget {
           ),
         ),
       );
-    });
+    },);
   }
 }

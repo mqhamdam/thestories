@@ -16,47 +16,54 @@ class NotificationsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Text("Notifications", style: TextStyle(color: Colors.black)),
+          title: const Text(
+            'Notifications',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
           bottom: TabBar(
             unselectedLabelColor: Colors.black,
             labelColor: Colors.black,
             indicatorColor: Colors.green,
             tabs: [
               Tab(
-                child: SvgPicture.asset("assets/icons/fi-rr-bell-ring.svg"),
+                child: SvgPicture.asset('assets/icons/fi-rr-bell-ring.svg'),
               ),
               Tab(
                 child: Row(
                   children: [
-                    SvgPicture.asset("assets/icons/fi-rr-thumbs-down.svg"),
-                    SizedBox(
+                    SvgPicture.asset('assets/icons/fi-rr-thumbs-down.svg'),
+                    const SizedBox(
                       width: 2,
                     ),
-                    SvgPicture.asset("assets/icons/fi-rr-thumbs-up.svg"),
+                    SvgPicture.asset('assets/icons/fi-rr-thumbs-up.svg'),
                   ],
                 ),
               ),
               Tab(
-                child: SvgPicture.asset("assets/icons/fi-rr-comment-alt.svg"),
+                child: SvgPicture.asset('assets/icons/fi-rr-comment-alt.svg'),
               ),
               Tab(
-                child: SvgPicture.asset("assets/icons/fi-rr-user-add.svg"),
+                child: SvgPicture.asset('assets/icons/fi-rr-user-add.svg'),
               ),
               Tab(
-                child: SvgPicture.asset("assets/icons/fi-rr-user-time.svg"),
+                child: SvgPicture.asset('assets/icons/fi-rr-user-time.svg'),
               ),
             ],
           ),
         ),
-        body: TabBarView(children: [
-          NotificationGeneralView(),
-          VotesView(),
-          NCommentsView(),
-          // when requested to client
-          NFSubscriberRequestedView(),
-          // when current client requested to other client
-          NFSubscribeRequestedView(),
-        ]),
+        body: const TabBarView(
+          children: [
+            NotificationGeneralView(),
+            VotesView(),
+            NCommentsView(),
+            // when requested to client
+            NFSubscriberRequestedView(),
+            // when current client requested to other client
+            NFSubscribeRequestedView(),
+          ],
+        ),
       ),
     );
   }

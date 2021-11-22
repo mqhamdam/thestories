@@ -18,11 +18,11 @@ class StoryMiniPreview extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(
-                  "This is Header",
+                const Text(
+                  'This is Header',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
-                Spacer(),
+                const Spacer(),
                 ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.black),
@@ -35,41 +35,41 @@ class StoryMiniPreview extends StatelessWidget {
                   onPressed: () {},
                   child: Row(
                     children: [
-                      Text("Read", style: TextStyle(color: Colors.white)),
-                      SizedBox(
+                      const Text('Read', style: TextStyle(color: Colors.white)),
+                      const SizedBox(
                         width: 20,
                       ),
                       SvgPicture.asset(
-                          "assets/icons/fi-rr-angle-double-small-right.svg",
-                          color: Colors.white),
+                          'assets/icons/fi-rr-angle-double-small-right.svg',
+                          color: Colors.white,),
                     ],
                   ),
                 ),
               ],
             ),
-            Divider(),
-            Text(
-              story_body_dummy_data,
+            const Divider(),
+            const Text(
+              storyBodyTemp,
               maxLines: 10,
             ),
-            Divider(),
+            const Divider(),
             Row(
-              children: [
-                Text("2021. 10. 21 07:07",
+              children: const [
+                Text('2021. 10. 21 07:07',
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
                         color: Colors.black87,
-                        fontSize: 10)),
+                        fontSize: 10,),),
                 Spacer(),
-                CustomAvatar(imgUrl: avatar_url_template, radius: 10),
+                CustomAvatar(imgUrl: avatarURLTemp, radius: 10),
                 SizedBox(
                   width: 10,
                 ),
-                Text("By @username",
+                Text('By @username',
                     style: TextStyle(
                         fontWeight: FontWeight.w300,
                         color: Colors.black87,
-                        fontSize: 10)),
+                        fontSize: 10,),),
               ],
             )
           ],

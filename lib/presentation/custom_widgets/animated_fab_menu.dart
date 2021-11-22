@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class AnimatedFabMenu extends StatefulWidget {
-  const AnimatedFabMenu({Key? key, required this.children}) : super(key: key);
+  const AnimatedFabMenu({
+    required this.children,
+    Key? key,
+  }) : super(key: key);
   final List<Widget> children;
   @override
   _AnimatedFabMenuState createState() => _AnimatedFabMenuState();
@@ -16,7 +19,7 @@ class _AnimatedFabMenuState extends State<AnimatedFabMenu>
   void initState() {
     _animationController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
     );
     _animationController.addListener(() {
       if (mounted) {
@@ -44,18 +47,14 @@ class _AnimatedFabMenuState extends State<AnimatedFabMenu>
           scale: _animationController,
           alignment: Alignment.bottomCenter,
           child: Column(
-            children: []..addAll(widget.children.map((e) => Padding(
+            children: [...widget.children.map((e) => Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),
                   child: e,
-                ))),
+                ),),],
           ),
         ),
         FloatingActionButton(
           heroTag: UniqueKey(),
-          child: AnimatedIcon(
-            icon: AnimatedIcons.menu_close,
-            progress: _animationController,
-          ),
           foregroundColor: _foregroundColorAnimation.value,
           backgroundColor: _backgroundColorAnimation.value,
           onPressed: () {
@@ -65,6 +64,10 @@ class _AnimatedFabMenuState extends State<AnimatedFabMenu>
               _animationController.forward();
             }
           },
+          child: AnimatedIcon(
+            icon: AnimatedIcons.menu_close,
+            progress: _animationController,
+          ),
         ),
       ],
     );

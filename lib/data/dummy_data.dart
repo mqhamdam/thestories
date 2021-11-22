@@ -1,4 +1,7 @@
-const String story_body_dummy_data =
+const String storyBodyTemp =
+    // ignore: leading_newlines_in_multiline_strings
+    // ignore: prefer_single_quotes
+    // ignore: leading_newlines_in_multiline_strings
     '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec fermentum urna, nec volutpat odio. Sed maximus dui ut tincidunt porttitor. Pellentesque eu nulla orci. Suspendisse vulputate imperdiet nulla, eu egestas nunc rutrum nec. Aliquam erat volutpat. Proin convallis porta congue. Vestibulum dignissim blandit placerat. Donec vehicula lorem eget velit dictum blandit.
 
 Aliquam accumsan neque non risus aliquam scelerisque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc nec nisi ornare, auctor lorem efficitur, mattis est. Morbi dignissim posuere vestibulum. Suspendisse scelerisque, ipsum vulputate faucibus fringilla, dolor est pharetra sem, sed elementum nibh massa eget eros. Aliquam accumsan ut risus in luctus. Sed scelerisque imperdiet risus, at auctor quam facilisis non. Aliquam auctor nisi gravida, scelerisque quam commodo, luctus lectus. Fusce id sagittis augue, ac feugiat orci. In sit amet mauris et dolor volutpat interdum. Aliquam erat volutpat. Fusce pellentesque lorem ac metus finibus, quis pretium sem convallis. Proin a mi congue, rhoncus mi ut, hendrerit est. Etiam aliquet mattis ex, ut convallis nulla rhoncus ac. Quisque lacinia mauris massa, vitae tristique tortor blandit porttitor.
@@ -11,13 +14,13 @@ Fusce tristique ultricies velit. Nulla vitae iaculis augue, nec bibendum felis. 
 
 Praesent leo nisl, tristique ac mi eu, imperdiet elementum lectus. Mauris ultrices interdum orci in fermentum. Sed eu lorem lobortis sem rutrum congue euismod id mi. Vivamus est risus, malesuada ac auctor et, sodales id tellus. Etiam ligula massa, malesuada eu libero eget, aliquam aliquam massa. Curabitur aliquet, ligula vitae aliquet auctor, nisl purus semper metus, in aliquet mi ex at ante. Nulla sollicitudin vestibulum elementum. ''';
 
-const String avatar_url_template = "https://via.placeholder.com/600";
+const String avatarURLTemp = 'https://via.placeholder.com/600';
 
-const String background_url_template = "https://via.placeholder.com/1280x960";
+const String backgroundURLTemp = 'https://via.placeholder.com/1280x960';
 
-const String cover_for_story_template = "https://via.placeholder.com/1360x768";
+const String coverStoryTemp = 'https://via.placeholder.com/1360x768';
 
-const String cover_for_stories_template =
-    "https://via.placeholder.com/2700x4100";
+const String coverSeriesTemp =
+    'https://via.placeholder.com/2700x4100';
 
 class AppUser {}

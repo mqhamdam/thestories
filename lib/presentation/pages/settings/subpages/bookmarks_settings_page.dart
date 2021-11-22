@@ -9,13 +9,16 @@ class BookmarksSettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text("Bookmark Settings", style: TextStyle(color: Colors.black)),
+        leading: const CustomBackButton(),
+        title: const Text(
+          'Bookmark Settings',
+          style: TextStyle(color: Colors.black),
+        ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
-              "assets/icons/fi-rr-add.svg",
+              'assets/icons/fi-rr-add.svg',
               color: Colors.black,
             ),
           )
@@ -26,20 +29,20 @@ class BookmarksSettingsScreen extends StatelessWidget {
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: ExpansionTile(
-                title: Text("Saved stories"),
+                title: Text('Saved stories'),
               ),
             ),
           ),
           Card(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: ExpansionTile(
-                title: Text("Saved series"),
+                title: Text('Saved series'),
               ),
             ),
           ),

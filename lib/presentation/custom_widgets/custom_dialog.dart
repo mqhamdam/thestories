@@ -3,7 +3,10 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class CustomDialog extends StatelessWidget {
-  const CustomDialog({Key? key, required this.body}) : super(key: key);
+  const CustomDialog({
+    required this.body,
+    Key? key,
+  }) : super(key: key);
   final Widget body;
   @override
   Widget build(BuildContext context) {
@@ -25,14 +28,18 @@ class CustomAboutDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return BackdropFilter(
       filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
-      child: AboutDialog(),
+      child: const AboutDialog(),
     );
   }
 }
 
 class CustomAlertDialog extends StatelessWidget {
   const CustomAlertDialog(
-      {Key? key, required this.title, required this.body, this.actions})
+      {
+      required this.title, 
+      required this.body, 
+      Key? key, 
+      this.actions,})
       : super(key: key);
   final Widget title;
   final Widget body;

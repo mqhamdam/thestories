@@ -13,8 +13,8 @@ class ReadingDrawer extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverAppBar(
-              title: Text(
-                "Stories",
+              title: const Text(
+                'Stories',
                 style: TextStyle(
                   color: Colors.black,
                 ),
@@ -25,7 +25,7 @@ class ReadingDrawer extends StatelessWidget {
                 IconButton(
                   onPressed: () {},
                   icon: SvgPicture.asset(
-                    "assets/icons/fi-rr-settings.svg",
+                    'assets/icons/fi-rr-settings.svg',
                     color: Colors.black,
                   ),
                 )
@@ -34,39 +34,48 @@ class ReadingDrawer extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  Divider(),
+                  const Divider(),
                   ExpansionTile(
-                    title: Text("Series"),
+                    title: const Text('Series'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-film.svg",
+                      'assets/icons/fi-rr-film.svg',
                       color: Colors.lightGreen,
                     ),
-                    children: ListTile.divideTiles(context: context, tiles: [
-                      for (var i = 0; i < 50; i++) DrawerStoryListItem()
-                    ]).toList(),
+                    children: ListTile.divideTiles(
+                      context: context,
+                      tiles: [
+                        for (var i = 0; i < 50; i++) const DrawerStoryListItem()
+                      ],
+                    ).toList(),
                   ),
-                  Divider(),
+                  const Divider(),
                   ExpansionTile(
-                    title: Text("Bookmarks"),
+                    title: const Text('Bookmarks'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-bookmark.svg",
+                      'assets/icons/fi-rr-bookmark.svg',
                       color: Colors.green,
                     ),
-                    children: ListTile.divideTiles(context: context, tiles: [
-                      for (var i = 0; i < 50; i++) DrawerStoryListItem()
-                    ]).toList(),
+                    children: ListTile.divideTiles(
+                      context: context,
+                      tiles: [
+                        for (var i = 0; i < 50; i++) const DrawerStoryListItem()
+                      ],
+                    ).toList(),
                   ),
-                  Divider(),
+                  const Divider(),
                   ExpansionTile(
-                    title: Text("History"),
+                    title: const Text('History'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-time-forward.svg",
+                      'assets/icons/fi-rr-time-forward.svg',
                       color: Colors.orange,
                     ),
                     maintainState: true,
-                    children: ListTile.divideTiles(context: context, tiles: [
-                      for (var i = 0; i < 50; i++) DrawerStoryListItem()
-                    ]).toList(),
+                    children: ListTile.divideTiles(
+                      context: context,
+                      tiles: [
+                        for (var i = 0; i < 50; i++) const DrawerStoryListItem()
+                      ],
+                    ).toList(),
                   ),
                 ],
               ),
@@ -77,44 +86,3 @@ class ReadingDrawer extends StatelessWidget {
     );
   }
 }
-// SliverList(
-//               delegate: SliverChildListDelegate(
-//                 [
-//                   ElevatedButton.icon(
-//                     style: ButtonStyle(
-//                       backgroundColor: MaterialStateProperty.all(Colors.white),
-//                       shape: MaterialStateProperty.all(
-//                         RoundedRectangleBorder(
-//                           borderRadius: BorderRadius.circular(33),
-//                         ),
-//                       ),
-//                     ),
-//                     onPressed: () {},
-//                     icon: SvgPicture.asset("assets/icons/fi-rr-bookmark.svg",
-//                         color: Colors.green),
-//                     label: Text("Bookmarks",
-//                         style: TextStyle(color: Colors.black)),
-//                   ),
-//                   Divider(),
-//                   ExpansionTile(
-//                     title: Text("asd"),
-//                     children: [Text("asd")],
-//                   ),
-//                   ElevatedButton.icon(
-//                     style: ButtonStyle(
-//                       backgroundColor: MaterialStateProperty.all(Colors.white),
-//                       shape: MaterialStateProperty.all(
-//                         RoundedRectangleBorder(
-//                           borderRadius: BorderRadius.circular(33),
-//                         ),
-//                       ),
-//                     ),
-//                     onPressed: () {},
-//                     icon: SvgPicture.asset("assets/icons/fi-rr-clock.svg",
-//                         color: Colors.orange),
-//                     label:
-//                         Text("History", style: TextStyle(color: Colors.black)),
-//                   ),
-//                 ],
-//               ),
-//             ),

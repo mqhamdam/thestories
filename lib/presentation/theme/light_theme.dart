@@ -11,11 +11,11 @@ ThemeData ligthTheme() {
       //primaryColor: Color.fromRGBO(64, 63, 63, 1),
       colorScheme: ColorScheme.fromSwatch(
         backgroundColor: Colors.white,
-        primaryColorDark: Color.fromRGBO(64, 63, 63, 1),
+        primaryColorDark: const Color.fromRGBO(64, 63, 63, 1),
         errorColor: Colors.red,
         // accentColor: Color.fromRGBO(66, 122, 91, 1),
         primarySwatch: Colors.indigo,
       ),
       bottomSheetTheme:
-          BottomSheetThemeData(backgroundColor: Colors.transparent));
+          const BottomSheetThemeData(backgroundColor: Colors.transparent),);
 }

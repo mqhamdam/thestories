@@ -9,7 +9,7 @@ class CustomBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () => AutoRouter.of(context).pop(),
-      icon: SvgPicture.asset("assets/icons/fi-rr-angle-left.svg"),
+      icon: SvgPicture.asset('assets/icons/fi-rr-angle-left.svg'),
     );
   }
 }

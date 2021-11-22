@@ -1,4 +1,3 @@
-import 'package:dartz/dartz_unsafe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/data/dummy_data.dart';
@@ -11,27 +10,29 @@ class ReadingBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: kToolbarHeight + 15),
       child: CustomScrollView(
-        physics: BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        physics: const BouncingScrollPhysics(
+          parent: AlwaysScrollableScrollPhysics(),
+        ),
         slivers: [
           SliverPadding(
             padding: const EdgeInsets.all(8.0),
             sliver: SliverList(
                 delegate: SliverChildListDelegate([
-              Text("Header",
+              const Text('Header',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 28,
-                  ))
-            ])),
+                  ),),
+            ],),),
           ),
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
                 if (body[index].isEven) {
-                  return Text(story_body_dummy_data);
+                  return const Text(storyBodyTemp);
                 } else {
                   return Image.network(
-                    cover_for_story_template,
+                    coverStoryTemp,
                     fit: BoxFit.fitWidth,
                   );
                 }
@@ -48,22 +49,25 @@ class ReadingBody extends StatelessWidget {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
                       SvgPicture.asset(
-                        "assets/icons/fi-rr-hastag.svg",
+                        'assets/icons/fi-rr-hastag.svg',
                         height: 15,
                         color: Colors.black87,
                       ),
                       for (var item
-                          in List.generate(20, (index) => "Text$index"))
+                          in List.generate(20, (index) => 'Text$index'))
                         Card(
                           shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(33)),
+                              borderRadius: BorderRadius.circular(33),),
                           color: Colors.black,
                           child: Padding(
                             padding: const EdgeInsets.all(5.0),
                             child: Text(
                               item,
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 8),
+                                  const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 8,
+                                  ),
                             ),
                           ),
                         ),
@@ -71,13 +75,13 @@ class ReadingBody extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   height: 200,
                   width: 300,
                   child: Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -86,23 +90,23 @@ class ReadingBody extends StatelessWidget {
                           ClipRRect(
                             borderRadius: BorderRadius.circular(22),
                             child: Image.network(
-                              cover_for_stories_template,
+                              coverStoryTemp,
                               fit: BoxFit.fitHeight,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 5,
                           ),
                           Flexible(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 SizedBox(
                                   height: 10,
                                 ),
                                 Flexible(
                                   child: Text(
-                                    "This is Series Title",
+                                    'This is Series Title',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
@@ -113,13 +117,13 @@ class ReadingBody extends StatelessWidget {
                                 ),
                                 Divider(),
                                 Text(
-                                  story_body_dummy_data,
+                                  storyBodyTemp,
                                   maxLines: 4,
                                 ),
                                 Spacer(),
-                                Text("Ep: 42"),
-                                Text("Likes"),
-                                Text("By @username / anon"),
+                                Text('Ep: 42'),
+                                Text('Likes'),
+                                Text('By @username / anon'),
                               ],
                             ),
                           )
@@ -151,10 +155,10 @@ class ReadingBody extends StatelessWidget {
                         ),
                         onPressed: () {},
                         icon: SvgPicture.asset(
-                            "assets/icons/fi-rr-angle-double-small-left.svg",
-                            color: Colors.black),
-                        label: Text("Previous",
-                            style: TextStyle(color: Colors.black)),
+                            'assets/icons/fi-rr-angle-double-small-left.svg',
+                            color: Colors.black,),
+                        label: const Text('Previous',
+                            style: TextStyle(color: Colors.black),),
                       ),
                       ElevatedButton.icon(
                         style: ButtonStyle(
@@ -168,10 +172,14 @@ class ReadingBody extends StatelessWidget {
                         ),
                         onPressed: () {},
                         icon:
-                            Text("Next", style: TextStyle(color: Colors.black)),
+                            const Text('Next', 
+                            style: TextStyle(
+                              color: Colors.black,
+                              ),
+                            ),
                         label: SvgPicture.asset(
-                            "assets/icons/fi-rr-angle-double-small-right.svg",
-                            color: Colors.black),
+                            'assets/icons/fi-rr-angle-double-small-right.svg',
+                            color: Colors.black,),
                       ),
                     ],
                   ),

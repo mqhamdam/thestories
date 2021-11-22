@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:thestories/data/dummy_data.dart';
@@ -17,43 +16,43 @@ class StoriesScreen extends StatelessWidget {
         displacement: 120.0,
         onRefresh: () async {},
         child: CustomScrollView(
-          physics:
-              BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+          physics: const BouncingScrollPhysics(
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           slivers: [
-            SliverAppBar(
+            const SliverAppBar(
               centerTitle: true,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(33),
-                    bottomRight: Radius.circular(33)),
+                    bottomRight: Radius.circular(33),),
               ),
               floating: true,
               backgroundColor: Colors.white,
-              title: Text("The Stories",
+              title: Text('The Stories',
                   style: TextStyle(
                     color: Colors.black,
-                    fontFamily: "IMFellEnglish",
+                    fontFamily: 'IMFellEnglish',
                     fontWeight: FontWeight.bold,
                     fontSize: 30,
                     letterSpacing: 3,
-                  )),
+                  ),),
             ),
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  Container(
+                  SizedBox(
                     height: 90,
                     child: ListView.builder(
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 4.0),
                           child: Column(
-                            children: [
-                              CustomAvatar(
-                                  imgUrl: avatar_url_template, radius: 30),
-                              Text("username")
+                            children: const [
+                              CustomAvatar(imgUrl: avatarURLTemp, radius: 30),
+                              Text('username')
                             ],
                           ),
                         );
@@ -71,7 +70,7 @@ class StoriesScreen extends StatelessWidget {
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33)),
+                        borderRadius: BorderRadius.circular(33),),
                     child: Column(
                       children: [
                         Padding(
@@ -81,33 +80,34 @@ class StoriesScreen extends StatelessWidget {
                           ),
                           child: Row(
                             children: [
-                              SvgPicture.asset("assets/icons/fi-rr-world.svg"),
-                              SizedBox(
+                              SvgPicture.asset('assets/icons/fi-rr-world.svg'),
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Text(
-                                "Public Stories",
+                              const Text(
+                                'Public Stories',
                                 style: TextStyle(fontSize: 20),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  InfiniteStoryListScreenRoute().show(context);
+                                  const InfiniteStoryListScreenRoute()
+                                      .show(context);
                                 },
                                 icon: SvgPicture.asset(
-                                    "assets/icons/fi-rr-angle-right.svg"),
+                                    'assets/icons/fi-rr-angle-right.svg',),
                               ),
                             ],
                           ),
                         ),
-                        Divider(),
-                        for (int i = 0; i < 10; i++) StoryMiniPreview(),
-                        Divider(),
+                        const Divider(),
+                        for (int i = 0; i < 10; i++) const StoryMiniPreview(),
+                        const Divider(),
                         TextButton(
                           onPressed: () {
-                            InfiniteStoryListScreenRoute().show(context);
+                            const InfiniteStoryListScreenRoute().show(context);
                           },
-                          child: Text("See all"),
+                          child: const Text('See all'),
                         ),
                       ],
                     ),
@@ -122,7 +122,7 @@ class StoriesScreen extends StatelessWidget {
                   Card(
                     elevation: 4,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33)),
+                        borderRadius: BorderRadius.circular(33),),
                     child: Column(
                       children: [
                         Padding(
@@ -132,33 +132,34 @@ class StoriesScreen extends StatelessWidget {
                           ),
                           child: Row(
                             children: [
-                              SvgPicture.asset("assets/icons/fi-rr-shield.svg"),
-                              SizedBox(
+                              SvgPicture.asset('assets/icons/fi-rr-shield.svg'),
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Text(
-                                "Private Stories",
+                              const Text(
+                                'Private Stories',
                                 style: TextStyle(fontSize: 20),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  InfiniteStoryListScreenRoute().show(context);
+                                  const InfiniteStoryListScreenRoute()
+                                      .show(context);
                                 },
                                 icon: SvgPicture.asset(
-                                    "assets/icons/fi-rr-angle-right.svg"),
+                                    'assets/icons/fi-rr-angle-right.svg',),
                               ),
                             ],
                           ),
                         ),
-                        Divider(),
-                        for (int i = 0; i < 10; i++) StoryMiniPreview(),
-                        Divider(),
+                        const Divider(),
+                        for (int i = 0; i < 10; i++) const StoryMiniPreview(),
+                        const Divider(),
                         TextButton(
                           onPressed: () {
-                            InfiniteStoryListScreenRoute().show(context);
+                            const InfiniteStoryListScreenRoute().show(context);
                           },
-                          child: Text("See all"),
+                          child: const Text('See all'),
                         ),
                       ],
                     ),
@@ -172,7 +173,7 @@ class StoriesScreen extends StatelessWidget {
                   // show 10 last public stories
                   Card(
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(33)),
+                        borderRadius: BorderRadius.circular(33),),
                     child: Column(
                       children: [
                         Padding(
@@ -182,30 +183,31 @@ class StoriesScreen extends StatelessWidget {
                           ),
                           child: Row(
                             children: [
-                              SvgPicture.asset("assets/icons/fi-rr-star.svg"),
-                              SizedBox(
+                              SvgPicture.asset('assets/icons/fi-rr-star.svg'),
+                              const SizedBox(
                                 width: 10,
                               ),
-                              Text(
-                                "Special Stories",
+                              const Text(
+                                'Special Stories',
                                 style: TextStyle(fontSize: 20),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               IconButton(
                                 onPressed: () {
-                                  SpecialStoryScreenRoute().show(context);
+                                  const SpecialStoryScreenRoute().show(context);
                                 },
                                 icon: SvgPicture.asset(
-                                    "assets/icons/fi-rr-angle-right.svg"),
+                                    'assets/icons/fi-rr-angle-right.svg',),
                               ),
                             ],
                           ),
                         ),
-                        for (int i = 0; i < 10; i++) SpecialGroupMiniPreview(),
-                        Divider(),
+                        for (int i = 0; i < 10; i++)
+                          const SpecialGroupMiniPreview(),
+                        const Divider(),
                         TextButton(
                           onPressed: () {},
-                          child: Text("See all"),
+                          child: const Text('See all'),
                         ),
                       ],
                     ),

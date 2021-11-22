@@ -4,6 +4,8 @@
 // AutoRouteGenerator
 // **************************************************************************
 
+// ignore_for_file: require_trailing_commas
+
 import 'package:auto_route/auto_route.dart' as _i16;
 import 'package:flutter/material.dart' as _i17;
 

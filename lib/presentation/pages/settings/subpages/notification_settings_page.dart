@@ -9,16 +9,16 @@ class NotificationSettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text(
-          "Notifications Settings",
+        leading: const CustomBackButton(),
+        title: const Text(
+          'Notifications Settings',
           style: TextStyle(color: Colors.black),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: SvgPicture.asset(
-              "assets/icons/fi-rr-broom.svg",
+              'assets/icons/fi-rr-broom.svg',
               color: Colors.black,
             ),
           ),
@@ -34,9 +34,9 @@ class NotificationSettingsScreen extends StatelessWidget {
               child: SwitchListTile.adaptive(
                 value: true,
                 onChanged: (value) {},
-                title: Text("Notifications"),
+                title: const Text('Notifications'),
                 secondary: SvgPicture.asset(
-                  "assets/icons/fi-rr-bell.svg",
+                  'assets/icons/fi-rr-bell.svg',
                   color: Colors.black,
                 ),
               ),
@@ -49,26 +49,26 @@ class NotificationSettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ExpansionTile(
                 leading: SvgPicture.asset(
-                  "assets/icons/fi-rr-bell-ring.svg",
+                  'assets/icons/fi-rr-bell-ring.svg',
                   color: Colors.black,
                 ),
-                title: Text("General"),
+                title: const Text('General'),
                 children: [
                   SwitchListTile.adaptive(
                     value: true,
                     onChanged: (value) {},
-                    title: Text("Recomendation"),
+                    title: const Text('Recomendation'),
                   ),
                   SwitchListTile.adaptive(
                     value: true,
                     onChanged: (value) {},
-                    title: Text("Achievements"),
+                    title: const Text('Achievements'),
                   ),
-                  ExpansionTile(
-                    title: Text("My favourite users"),
+                  const ExpansionTile(
+                    title: Text('My favourite users'),
                   ),
-                  ExpansionTile(
-                    title: Text("My favourite series"),
+                  const ExpansionTile(
+                    title: Text('My favourite series'),
                   ),
                 ],
               ),
@@ -81,26 +81,25 @@ class NotificationSettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ExpansionTile(
                 leading: SvgPicture.asset(
-                  "assets/icons/fi-rr-world.svg",
+                  'assets/icons/fi-rr-world.svg',
                   color: Colors.black,
                 ),
-                title: Text("Public Story"),
+                title: const Text('Public Story'),
                 children: [
                   Column(
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-up.svg",
+                          'assets/icons/fi-rr-thumbs-up.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote up: "),
+                        title: const Text('Notify on every vote up: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -109,17 +108,16 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-down.svg",
+                          'assets/icons/fi-rr-thumbs-down.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote down: "),
+                        title: const Text('Notify on every vote down: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -128,27 +126,26 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-comment-alt.svg",
+                          'assets/icons/fi-rr-comment-alt.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every comment(s):"),
+                        title: const Text('Notify on every comment(s):'),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
                   ),
                   ExpansionTile(
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-asterik.svg",
+                      'assets/icons/fi-rr-asterik.svg',
                       color: Colors.black,
                     ),
-                    title: Text("Exceptions"),
+                    title: const Text('Exceptions'),
                   ),
                 ],
               ),
@@ -161,26 +158,25 @@ class NotificationSettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ExpansionTile(
                 leading: SvgPicture.asset(
-                  "assets/icons/fi-rr-shield.svg",
+                  'assets/icons/fi-rr-shield.svg',
                   color: Colors.black,
                 ),
-                title: Text("Private Story"),
+                title: const Text('Private Story'),
                 children: [
                   Column(
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-up.svg",
+                          'assets/icons/fi-rr-thumbs-up.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote up: "),
+                        title: const Text('Notify on every vote up: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -189,17 +185,16 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-down.svg",
+                          'assets/icons/fi-rr-thumbs-down.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote down: "),
+                        title: const Text('Notify on every vote down: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -208,27 +203,26 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-comment-alt.svg",
+                          'assets/icons/fi-rr-comment-alt.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every comment(s):"),
+                        title: const Text('Notify on every comment(s):'),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
                   ),
                   ExpansionTile(
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-asterik.svg",
+                      'assets/icons/fi-rr-asterik.svg',
                       color: Colors.black,
                     ),
-                    title: Text("Exceptions"),
+                    title: const Text('Exceptions'),
                   ),
                 ],
               ),
@@ -241,26 +235,25 @@ class NotificationSettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ExpansionTile(
                 leading: SvgPicture.asset(
-                  "assets/icons/fi-rr-star.svg",
+                  'assets/icons/fi-rr-star.svg',
                   color: Colors.black,
                 ),
-                title: Text("Special Story"),
+                title: const Text('Special Story'),
                 children: [
                   Column(
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-up.svg",
+                          'assets/icons/fi-rr-thumbs-up.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote up: "),
+                        title: const Text('Notify on every vote up: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -269,17 +262,16 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-thumbs-down.svg",
+                          'assets/icons/fi-rr-thumbs-down.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every vote down: "),
+                        title: const Text('Notify on every vote down: '),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
@@ -288,27 +280,26 @@ class NotificationSettingsScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: SvgPicture.asset(
-                          "assets/icons/fi-rr-comment-alt.svg",
+                          'assets/icons/fi-rr-comment-alt.svg',
                           color: Colors.black,
                         ),
-                        title: Text("Notify on every comment(s):"),
+                        title: const Text('Notify on every comment(s):'),
                       ),
                       Slider.adaptive(
-                        label: "52",
+                        label: '52',
                         divisions: 10,
                         value: 51,
                         onChanged: (value) {},
-                        min: 0,
                         max: 1000,
                       ),
                     ],
                   ),
                   ExpansionTile(
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-asterik.svg",
+                      'assets/icons/fi-rr-asterik.svg',
                       color: Colors.black,
                     ),
-                    title: Text("Exceptions"),
+                    title: const Text('Exceptions'),
                   ),
                 ],
               ),
@@ -321,10 +312,10 @@ class NotificationSettingsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: ExpansionTile(
                 leading: SvgPicture.asset(
-                  "assets/icons/fi-rr-user-add.svg",
+                  'assets/icons/fi-rr-user-add.svg',
                   color: Colors.black,
                 ),
-                title: Text("Requests or new subscribers"),
+                title: const Text('Requests or new subscribers'),
                 children: ListTile.divideTiles(
                   context: context,
                   tiles: [
@@ -333,18 +324,17 @@ class NotificationSettingsScreen extends StatelessWidget {
                         SwitchListTile.adaptive(
                           value: true,
                           onChanged: (value) {},
-                          title: Text("Notify approved requests"),
+                          title: const Text('Notify approved requests'),
                         ),
-                        ListTile(
+                        const ListTile(
                           title:
-                              Text("Notify on every requests(new subscribers)"),
+                              Text('Notify on every requests(new subscribers)'),
                         ),
                         Slider.adaptive(
-                          label: "52",
+                          label: '52',
                           divisions: 10,
                           value: 51,
                           onChanged: (value) {},
-                          min: 0,
                           max: 1000,
                         ),
                       ],
@@ -359,166 +349,3 @@ class NotificationSettingsScreen extends StatelessWidget {
     );
   }
 }
-// Card(
-//             shape:
-//                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-//             child: Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: ExpansionTile(
-//                 leading: SvgPicture.asset(
-//                   "assets/icons/fi-rr-thumbs-up.svg",
-//                   color: Colors.black,
-//                 ),
-//                 title: Text("Vote up"),
-//                 children: ListTile.divideTiles(
-//                   context: context,
-//                   tiles: [
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every votes up"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every vote down"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every vote down"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ).toList(),
-//               ),
-//             ),
-//           ),
-//           Card(
-//             shape:
-//                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-//             child: Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: ExpansionTile(
-//                 leading: SvgPicture.asset(
-//                   "assets/icons/fi-rr-thumbs-down.svg",
-//                   color: Colors.black,
-//                 ),
-//                 title: Text("Vote down"),
-//                 children: ListTile.divideTiles(
-//                   context: context,
-//                   tiles: [
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text(
-//                               "Notify on every vote up in single Public story"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every vote down"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ).toList(),
-//               ),
-//             ),
-//           ),
-//           Card(
-//             shape:
-//                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-//             child: Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: ExpansionTile(
-//                 leading: SvgPicture.asset(
-//                   "assets/icons/fi-rr-comment-alt.svg",
-//                   color: Colors.black,
-//                 ),
-//                 title: Text("Comments"),
-//                 children: ListTile.divideTiles(
-//                   context: context,
-//                   tiles: [
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every votes up"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                     Column(
-//                       children: [
-//                         ListTile(
-//                           title: Text("Notify on every vote down"),
-//                         ),
-//                         Slider.adaptive(
-//                           label: "52",
-//                           divisions: 10,
-//                           value: 51,
-//                           onChanged: (value) {},
-//                           min: 0,
-//                           max: 1000,
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ).toList(),
-//               ),
-//             ),
-//           ),

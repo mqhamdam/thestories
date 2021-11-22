@@ -9,8 +9,11 @@ class AccountSettingsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CustomBackButton(),
-        title: Text("Account settings", style: TextStyle(color: Colors.black)),
+        leading: const CustomBackButton(),
+        title: const Text(
+          'Account settings',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: ListView(
         children: [
@@ -24,18 +27,18 @@ class AccountSettingsScreen extends StatelessWidget {
                   SwitchListTile.adaptive(
                     value: true,
                     onChanged: (value) {},
-                    title: Text("Private Account"),
+                    title: const Text('Private Account'),
                     secondary: SvgPicture.asset(
-                      "assets/icons/fi-rr-lock.svg",
+                      'assets/icons/fi-rr-lock.svg',
                       color: Colors.black,
                     ),
                   ),
                   SwitchListTile.adaptive(
                     value: false,
                     onChanged: (value) {},
-                    title: Text("Premium Account"),
+                    title: const Text('Premium Account'),
                     secondary: SvgPicture.asset(
-                      "assets/icons/fi-rr-crown.svg",
+                      'assets/icons/fi-rr-crown.svg',
                       color: Colors.black,
                     ),
                   ),
@@ -51,41 +54,16 @@ class AccountSettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   ListTile(
-                    title: Text("Change Email"),
+                    title: const Text('Change Email'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-at.svg",
+                      'assets/icons/fi-rr-at.svg',
                       color: Colors.black,
                     ),
                   ),
                   ListTile(
-                    title: Text("Change Password"),
+                    title: const Text('Change Password'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-lock-alt.svg",
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Card(
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                children: [
-                  ListTile(
-                    title: Text("Email verification"),
-                    leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-checkbox.svg",
-                      color: Colors.black,
-                    ),
-                  ),
-                  ListTile(
-                    title: Text("Account verification"),
-                    leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-shield-check.svg",
+                      'assets/icons/fi-rr-lock-alt.svg',
                       color: Colors.black,
                     ),
                   ),
@@ -101,16 +79,41 @@ class AccountSettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   ListTile(
-                    title: Text("Pause Account"),
+                    title: const Text('Email verification'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-pause.svg",
+                      'assets/icons/fi-rr-checkbox.svg',
                       color: Colors.black,
                     ),
                   ),
                   ListTile(
-                    title: Text("Delete Account"),
+                    title: const Text('Account verification'),
                     leading: SvgPicture.asset(
-                      "assets/icons/fi-rr-cross-circle.svg",
+                      'assets/icons/fi-rr-shield-check.svg',
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(33)),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  ListTile(
+                    title: const Text('Pause Account'),
+                    leading: SvgPicture.asset(
+                      'assets/icons/fi-rr-pause.svg',
+                      color: Colors.black,
+                    ),
+                  ),
+                  ListTile(
+                    title: const Text('Delete Account'),
+                    leading: SvgPicture.asset(
+                      'assets/icons/fi-rr-cross-circle.svg',
                       color: Colors.black,
                     ),
                   ),
