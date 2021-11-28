@@ -4,6 +4,7 @@ The Stories is a community where users share their life or fiction stories. Stor
 
 [![Dart](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml)
 [![CodeQL](https://github.com/mqhamdam/thestories/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/codeql-analysis.yml)
+[![Node workflow](https://github.com/mqhamdam/thestories/actions/workflows/nodejs.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/nodejs.yml)
 
 This project uses Serverless Architecture – FaaS 
 
