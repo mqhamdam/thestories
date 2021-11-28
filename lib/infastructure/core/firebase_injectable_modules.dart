@@ -9,3 +9,4 @@ abstract class FirebaseInjectableModules {
   @lazySingleton
   FirebaseFirestore get firestore => FirebaseFirestore.instance;
 }
+

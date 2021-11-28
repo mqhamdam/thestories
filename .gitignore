@@ -47,3 +47,4 @@ app.*.map.json
 
 # --- Custom Git Ignore File
 .VSCodeCounter/
+functions/package-lock.json
