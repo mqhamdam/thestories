@@ -1,18 +1,22 @@
 /* eslint-disable */
-const functions = require("firebase-functions");
-const express = require('express');
-const cors = require('cors');
-//const morgan = require('morgan');
-// The Firebase Admin SDK to access Firestore.
+
 const admin = require('firebase-admin');
+// ! APIS
+const users = require('./src/api/users_api');
+const stories = require('./src/api/stories_api');
+
+// -------------
+
+// ! triggers
+const onUserCreated = require('./src/triggers/auth/onUserCreated');
+const onUserDeleted = require('./src/triggers/auth/onUserDeleted');
+
 
 // init connection to project
 admin.initializeApp();
-const app = express();
 
-app.use(cors({ origin: true }));
+//  export functions 
 
-
-
-    // root function 
-exports.api = functions.https.onRequest((req,res)=>res.send("sss"));
+exports.users= users.users;
+exports.onUserCreated = onUserCreated.onUserCreated;
+exports.onUserDeleted = onUserDeleted.onUserDeleted;

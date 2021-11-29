@@ -5,13 +5,13 @@ module.exports = {
     node: true,
   },
   extends: [
-    "eslint:recommended",
-    "google",
+    'eslint:recommended',
+    'google',
   ],
   parserOptions: {
     ecmaVersion: 8,
   },
   rules: {
-    quotes: ["error", "double"],
+
   },
 };
