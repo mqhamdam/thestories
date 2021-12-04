@@ -1,5 +1,5 @@
-# The Stories
-
+## The Stories
+# Currently this project under development
 The Stories is a community where users share their life or fiction stories. Stories that will help people exchange life experiences, improve thinking, imagination, writing and reading skills. Publications in our application consists only text and images. Thus, users can focus only for reading and writing stories.
 
 [![Dart](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml)
