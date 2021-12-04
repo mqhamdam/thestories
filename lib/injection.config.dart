@@ -4,7 +4,7 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-import 'package:cloud_firestore/cloud_firestore.dart' as _i4;
+import 'package:cloud_functions/cloud_functions.dart' as _i4;
 import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
@@ -17,12 +17,12 @@ import 'infastructure/core/firebase_injectable_modules.dart'
 _i1.GetIt $initGetIt(_i1.GetIt get,
     {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
   final gh = _i2.GetItHelper(get, environment, environmentFilter);
-  final firebaseInjectableModules = _$FirebaseInjectableModules();
+  final firebaseInjectableModule = _$FirebaseInjectableModule();
   gh.lazySingleton<_i3.FirebaseAuth>(
-      () => firebaseInjectableModules.firebaseAuth);
-  gh.lazySingleton<_i4.FirebaseFirestore>(
-      () => firebaseInjectableModules.firestore);
+      () => firebaseInjectableModule.firebaseAuth);
+  gh.lazySingleton<_i4.FirebaseFunctions>(
+      () => firebaseInjectableModule.cloudFunctions);
   return get;
 }
 
-class _$FirebaseInjectableModules extends _i5.FirebaseInjectableModules {}
+class _$FirebaseInjectableModule extends _i5.FirebaseInjectableModule {}
