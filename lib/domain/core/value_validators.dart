@@ -35,3 +35,7 @@ Either<ValueFailure<String>, String> validateUrl(String value) {
     return right(value);
   }
 }
+
+Either<ValueFailure<bool>, bool> validateBoolean(bool value) {
+  return right(value);
+}

@@ -196,19 +196,16 @@ class _$ExceedingLimit<T>
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is ExceedingLimit<T> &&
-            (identical(other.failedvalue, failedvalue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedvalue, failedvalue)) &&
-            (identical(other.limit, limit) ||
-                const DeepCollectionEquality().equals(other.limit, limit)));
+        (other.runtimeType == runtimeType &&
+            other is ExceedingLimit<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedvalue, failedvalue) &&
+            (identical(other.limit, limit) || other.limit == limit));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failedvalue) ^
-      const DeepCollectionEquality().hash(limit);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedvalue), limit);
 
   @JsonKey(ignore: true)
   @override
@@ -300,8 +297,8 @@ abstract class ExceedingLimit<T> implements ValueFailure<T> {
   const factory ExceedingLimit({required T failedvalue, required int limit}) =
       _$ExceedingLimit<T>;
 
-  T get failedvalue => throw _privateConstructorUsedError;
-  int get limit => throw _privateConstructorUsedError;
+  T get failedvalue;
+  int get limit;
   @JsonKey(ignore: true)
   $ExceedingLimitCopyWith<T, ExceedingLimit<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -360,15 +357,15 @@ class _$Emty<T> with DiagnosticableTreeMixin implements Emty<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Emty<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is Emty<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -459,7 +456,7 @@ class _$Emty<T> with DiagnosticableTreeMixin implements Emty<T> {
 abstract class Emty<T> implements ValueFailure<T> {
   const factory Emty({required T failedValue}) = _$Emty<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $EmtyCopyWith<T, Emty<T>> get copyWith => throw _privateConstructorUsedError;
 }
@@ -522,15 +519,15 @@ class _$InvalidEmail<T>
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidEmail<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidEmail<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -621,7 +618,7 @@ class _$InvalidEmail<T>
 abstract class InvalidEmail<T> implements ValueFailure<T> {
   const factory InvalidEmail({required T failedValue}) = _$InvalidEmail<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -685,15 +682,15 @@ class _$WeakPassword<T>
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is WeakPassword<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is WeakPassword<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -784,7 +781,7 @@ class _$WeakPassword<T>
 abstract class WeakPassword<T> implements ValueFailure<T> {
   const factory WeakPassword({required T failedValue}) = _$WeakPassword<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $WeakPasswordCopyWith<T, WeakPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
@@ -846,15 +843,15 @@ class _$InvalidUrl<T> with DiagnosticableTreeMixin implements InvalidUrl<T> {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is InvalidUrl<T> &&
-            (identical(other.failedValue, failedValue) ||
-                const DeepCollectionEquality()
-                    .equals(other.failedValue, failedValue)));
+        (other.runtimeType == runtimeType &&
+            other is InvalidUrl<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failedValue, failedValue));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failedValue));
 
   @JsonKey(ignore: true)
   @override
@@ -945,7 +942,7 @@ class _$InvalidUrl<T> with DiagnosticableTreeMixin implements InvalidUrl<T> {
 abstract class InvalidUrl<T> implements ValueFailure<T> {
   const factory InvalidUrl({required T failedValue}) = _$InvalidUrl<T>;
 
-  T get failedValue => throw _privateConstructorUsedError;
+  T get failedValue;
   @JsonKey(ignore: true)
   $InvalidUrlCopyWith<T, InvalidUrl<T>> get copyWith =>
       throw _privateConstructorUsedError;

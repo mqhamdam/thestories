@@ -13,14 +13,18 @@ abstract class ValueObject<T> {
     return value.fold((l) => throw UnexpectedValueError(l), (r) => r);
   }
 
-  bool isvalid () {
+  T getOrElse(T alt) {
+    return value.getOrElse(() => alt);
+  }
+
+  bool isvalid() {
     return value.isRight();
   }
-  
+
   @override
   bool operator ==(Object o) {
-    if(identical(this, o)) return true;
-    return o is ValueObject<T> && o.value == value; 
+    if (identical(this, o)) return true;
+    return o is ValueObject<T> && o.value == value;
   }
 
   @override
