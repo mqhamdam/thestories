@@ -41,6 +41,7 @@ abstract class AppUserDto with _$AppUserDto {
   }
   factory AppUserDto.fromJson(Map<String, dynamic> json) =>
       _$AppUserDtoFromJson(json);
+  
 }
 
 extension AppUserDtoX on AppUserDto {

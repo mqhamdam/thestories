@@ -3,7 +3,7 @@ import 'package:thestories/domain/core/value_failure.dart';
 import 'package:thestories/domain/core/value_object.dart';
 import 'package:thestories/domain/core/value_validators.dart';
 
-enum SubscriptionStatus { subscribed, requested, none, me }
+enum SubscriptionStatus { subscribed, requested, loading, none, me }
 
 class UserAuthID extends ValueObject<String> {
   factory UserAuthID(String userAuthID) {

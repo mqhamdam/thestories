@@ -43,6 +43,7 @@ Map<String, dynamic> _$$_AppUserDtoToJson(_$_AppUserDto instance) =>
 const _$SubscriptionStatusEnumMap = {
   SubscriptionStatus.subscribed: 'subscribed',
   SubscriptionStatus.requested: 'requested',
+  SubscriptionStatus.loading: 'loading',
   SubscriptionStatus.none: 'none',
   SubscriptionStatus.me: 'me',
 };
