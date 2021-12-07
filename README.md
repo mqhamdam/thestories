@@ -2,6 +2,10 @@
 # Currently this project under development
 The Stories is a community where users share their life or fiction stories. Stories that will help people exchange life experiences, improve thinking, imagination, writing and reading skills. Publications in our application consists only text and images. Thus, users can focus only for reading and writing stories.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+
+
 [![Dart](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/dart.yml)
 [![CodeQL](https://github.com/mqhamdam/thestories/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/codeql-analysis.yml)
 [![Node workflow](https://github.com/mqhamdam/thestories/actions/workflows/nodejs.yml/badge.svg)](https://github.com/mqhamdam/thestories/actions/workflows/nodejs.yml)
