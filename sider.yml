@@ -1,0 +1,87 @@
+# This is a configuration file to customize code analysis by Sider.
+#
+# For more information, see the documentation:
+# https://help.sider.review/getting-started/custom-configuration
+
+# Customize each tool. If analyses fail, try adjusting each option referencing the following example.
+linter:
+
+#   # detekt example. See https://help.sider.review/tools/kotlin/detekt
+#   detekt:
+#     root_dir: project/
+#     dependencies:
+#       - "com.example:detekt-rules:1.0.0"
+#     baseline: config/detekt-baseline.xml
+#     config:
+#       - config/detekt-config.yml
+#     config-resource:
+#       - /detekt-config-on-classpath.yml
+#     disable-default-rulesets: true
+#     excludes:
+#       - "**/vendor/**"
+#     includes:
+#       - "**/important/**"
+#     target:
+#       - src/
+#       - test/
+#     parallel: true
+
+#   # ktlint example. See https://help.sider.review/tools/kotlin/ktlint
+#   ktlint:
+#     root_dir: project/
+#     dependencies:
+#       - "my.company.com:ktlint-rules:1.0.0"
+#     target:
+#       - "src/**/*.kt"
+#       - "!src/**/*Test.kt"
+#       - "test/"
+#     ruleset:
+#       - rules/my-ktlint-rules.jar
+#     disabled_rules:
+#       - no-wildcard-imports
+#       - indent
+#     experimental: true
+
+#   # Misspell example. See https://help.sider.review/tools/others/misspell
+#   misspell:
+#     root_dir: project/
+#     target: [src/, test/]
+#     exclude: ["**/*.min.*"]
+#     locale: UK
+#     ignore: [center, behavior]
+
+#   # ShellCheck example. See https://help.sider.review/tools/shellscript/shellcheck
+#   shellcheck:
+#     root_dir: project/
+#     target:
+#       - "**/*.{sh,bash}"
+#       - shebang: true
+#     include: [SC2104, SC2105]
+#     exclude: [SC1000, SC1118]
+#     enable: all
+#     shell: bash
+#     severity: error
+#     norc: true
+
+#   # SwiftLint example. See https://help.sider.review/tools/swift/swiftlint
+#   swiftlint:
+#     root_dir: project/
+#     ignore_warnings: true
+#     target: [src/]
+#     config: config/.swiftlint.yml
+#     lenient: true
+#     enable-all-rules: true
+
+# Ignore specific files. Example:
+# ignore:
+#   - "*.pdf"
+#   - "*.mp4"
+#   - "*.min.*"
+#   - "images/**"
+
+# Exclude specific branches. Example:
+# branches:
+#   exclude:
+#     - master
+#     - development
+#     - /^release-.*$/
